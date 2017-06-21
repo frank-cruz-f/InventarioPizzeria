@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventarioPizzeria", "InventarioPizzeria\InventarioPizzeria.csproj", "{1AF12746-95BE-4F67-ACC1-5252CB242A15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventarioPizzeriaDAL", "InventarioPizzeriaDAL\InventarioPizzeriaDAL.csproj", "{36153C14-5B49-481A-B6CC-F9EAB91DA07D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AF12746-95BE-4F67-ACC1-5252CB242A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF12746-95BE-4F67-ACC1-5252CB242A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF12746-95BE-4F67-ACC1-5252CB242A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF12746-95BE-4F67-ACC1-5252CB242A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36153C14-5B49-481A-B6CC-F9EAB91DA07D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36153C14-5B49-481A-B6CC-F9EAB91DA07D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36153C14-5B49-481A-B6CC-F9EAB91DA07D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36153C14-5B49-481A-B6CC-F9EAB91DA07D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
