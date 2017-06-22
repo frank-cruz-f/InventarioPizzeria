@@ -62,15 +62,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InventarioPizzeriaDataSet.Designer.cs">
+    <Compile Include="LocalInvPizzDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>InventarioPizzeriaDataSet.xsd</DependentUpon>
+      <DependentUpon>LocalInvPizzDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="InventarioPizzeriaDataSet1.Designer.cs">
+    <Compile Include="LocalInvPizzDBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>InventarioPizzeriaDataSet1.xsd</DependentUpon>
+      <DependentUpon>LocalInvPizzDBDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -119,27 +119,27 @@
     <EmbeddedResource Include="Views\ConfigIngred.resx">
       <DependentUpon>ConfigIngred.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="InventarioPizzeriaDataSet.xsc">
-      <DependentUpon>InventarioPizzeriaDataSet.xsd</DependentUpon>
+    <None Include="LocalInvPizzDBDataSet.xsc">
+      <DependentUpon>LocalInvPizzDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="InventarioPizzeriaDataSet.xsd">
+    <None Include="LocalInvPizzDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>InventarioPizzeriaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>LocalInvPizzDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="InventarioPizzeriaDataSet.xss">
-      <DependentUpon>InventarioPizzeriaDataSet.xsd</DependentUpon>
+    <None Include="LocalInvPizzDBDataSet.xss">
+      <DependentUpon>LocalInvPizzDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="InventarioPizzeriaDataSet1.xsc">
-      <DependentUpon>InventarioPizzeriaDataSet1.xsd</DependentUpon>
+    <None Include="LocalInvPizzDBDataSet1.xsc">
+      <DependentUpon>LocalInvPizzDBDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="InventarioPizzeriaDataSet1.xsd">
+    <None Include="LocalInvPizzDBDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>InventarioPizzeriaDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>LocalInvPizzDBDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="InventarioPizzeriaDataSet1.xss">
-      <DependentUpon>InventarioPizzeriaDataSet1.xsd</DependentUpon>
+    <None Include="LocalInvPizzDBDataSet1.xss">
+      <DependentUpon>LocalInvPizzDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -26,8 +26,8 @@ namespace InventarioPizzeria.Views
 
         private void BurntDough_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'inventarioPizzeriaDataSet1.BurntDough' table. You can move, or remove it, as needed.
-            this.burntDoughTableAdapter.Fill(this.inventarioPizzeriaDataSet1.BurntDough);
+            // TODO: This line of code loads data into the 'localInvPizzDBDataSet1.BurntDough' table. You can move, or remove it, as needed.
+            this.burntDoughTableAdapter.Fill(this.localInvPizzDBDataSet1.BurntDough);
         }
 
         private void DoughGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -110,7 +110,7 @@ namespace InventarioPizzeria.Views
 
         private void reloadGridView()
         {
-            this.burntDoughTableAdapter.Fill(this.inventarioPizzeriaDataSet1.BurntDough);
+            this.burntDoughTableAdapter.Fill(this.localInvPizzDBDataSet1.BurntDough);
         }
 
         private void addBtn_Click(object sender, EventArgs e)

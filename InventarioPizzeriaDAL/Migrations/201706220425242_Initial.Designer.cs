@@ -13,7 +13,7 @@ namespace InventarioPizzeriaDAL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201706210542391_Initial"; }
+            get { return "201706220425242_Initial"; }
         }
         
         string IMigrationMetadata.Source

@@ -33,5 +33,16 @@ namespace InventarioPizzeria.Properties {
                 return ((string)(this["InventarioPizzeriaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\v11.0;Initial Catalog=LocalInvPizzDB;Integrated Security=Tr" +
+            "ue")]
+        public string LocalInvPizzDBConnectionString {
+            get {
+                return ((string)(this["LocalInvPizzDBConnectionString"]));
+            }
+        }
     }
 }

@@ -67,9 +67,9 @@
     <Compile Include="Entities\BurntDough.cs" />
     <Compile Include="Entities\InvPizzeriaModel.cs" />
     <Compile Include="Entities\Product.cs" />
-    <Compile Include="Migrations\201706210542391_Initial.cs" />
-    <Compile Include="Migrations\201706210542391_Initial.Designer.cs">
-      <DependentUpon>201706210542391_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201706220425242_Initial.cs" />
+    <Compile Include="Migrations\201706220425242_Initial.Designer.cs">
+      <DependentUpon>201706220425242_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,8 +82,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706210542391_Initial.resx">
-      <DependentUpon>201706210542391_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706220425242_Initial.resx">
+      <DependentUpon>201706220425242_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -12,7 +12,7 @@ namespace InventarioPizzeriaDAL.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Entities.InvPizzeriaModel context)
+        protected override void Seed(InventarioPizzeriaDAL.Entities.InvPizzeriaModel context)
         {
             //  This method will be called after migrating to the latest version.
 

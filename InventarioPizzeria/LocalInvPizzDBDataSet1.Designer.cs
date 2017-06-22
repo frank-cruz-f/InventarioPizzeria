@@ -20,9 +20,9 @@ namespace InventarioPizzeria {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("InventarioPizzeriaDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("LocalInvPizzDBDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class InventarioPizzeriaDataSet1 : global::System.Data.DataSet {
+    public partial class LocalInvPizzDBDataSet1 : global::System.Data.DataSet {
         
         private BurntDoughDataTable tableBurntDough;
         
@@ -30,7 +30,7 @@ namespace InventarioPizzeria {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public InventarioPizzeriaDataSet1() {
+        public LocalInvPizzDBDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace InventarioPizzeria {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected InventarioPizzeriaDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected LocalInvPizzDBDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace InventarioPizzeria {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            InventarioPizzeriaDataSet1 cln = ((InventarioPizzeriaDataSet1)(base.Clone()));
+            LocalInvPizzDBDataSet1 cln = ((LocalInvPizzDBDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace InventarioPizzeria {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "InventarioPizzeriaDataSet1";
+            this.DataSetName = "LocalInvPizzDBDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/InventarioPizzeriaDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/LocalInvPizzDBDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableBurntDough = new BurntDoughDataTable();
@@ -225,7 +225,7 @@ namespace InventarioPizzeria {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            InventarioPizzeriaDataSet1 ds = new InventarioPizzeriaDataSet1();
+            LocalInvPizzDBDataSet1 ds = new LocalInvPizzDBDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -521,7 +521,7 @@ namespace InventarioPizzeria {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                InventarioPizzeriaDataSet1 ds = new InventarioPizzeriaDataSet1();
+                LocalInvPizzDBDataSet1 ds = new LocalInvPizzDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -674,7 +674,7 @@ namespace InventarioPizzeria {
         }
     }
 }
-namespace InventarioPizzeria.InventarioPizzeriaDataSet1TableAdapters {
+namespace InventarioPizzeria.LocalInvPizzDBDataSet1TableAdapters {
     
     
     /// <summary>
@@ -838,7 +838,7 @@ SELECT ID, BurnedGrams, cookName, burntDate FROM BurntDough WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::InventarioPizzeria.Properties.Settings.Default.InventarioPizzeriaConnectionString;
+            this._connection.ConnectionString = global::InventarioPizzeria.Properties.Settings.Default.LocalInvPizzDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -855,7 +855,7 @@ SELECT ID, BurnedGrams, cookName, burntDate FROM BurntDough WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(InventarioPizzeriaDataSet1.BurntDoughDataTable dataTable) {
+        public virtual int Fill(LocalInvPizzDBDataSet1.BurntDoughDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -868,9 +868,9 @@ SELECT ID, BurnedGrams, cookName, burntDate FROM BurntDough WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual InventarioPizzeriaDataSet1.BurntDoughDataTable GetData() {
+        public virtual LocalInvPizzDBDataSet1.BurntDoughDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            InventarioPizzeriaDataSet1.BurntDoughDataTable dataTable = new InventarioPizzeriaDataSet1.BurntDoughDataTable();
+            LocalInvPizzDBDataSet1.BurntDoughDataTable dataTable = new LocalInvPizzDBDataSet1.BurntDoughDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -878,14 +878,14 @@ SELECT ID, BurnedGrams, cookName, burntDate FROM BurntDough WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(InventarioPizzeriaDataSet1.BurntDoughDataTable dataTable) {
+        public virtual int Update(LocalInvPizzDBDataSet1.BurntDoughDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(InventarioPizzeriaDataSet1 dataSet) {
+        public virtual int Update(LocalInvPizzDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "BurntDough");
         }
         
@@ -1090,7 +1090,7 @@ SELECT ID, BurnedGrams, cookName, burntDate FROM BurntDough WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(InventarioPizzeriaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(LocalInvPizzDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._burntDoughTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.BurntDough.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1109,7 +1109,7 @@ SELECT ID, BurnedGrams, cookName, burntDate FROM BurntDough WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(InventarioPizzeriaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(LocalInvPizzDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._burntDoughTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.BurntDough.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1127,7 +1127,7 @@ SELECT ID, BurnedGrams, cookName, burntDate FROM BurntDough WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(InventarioPizzeriaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(LocalInvPizzDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._burntDoughTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.BurntDough.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1169,7 +1169,7 @@ SELECT ID, BurnedGrams, cookName, burntDate FROM BurntDough WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(InventarioPizzeriaDataSet1 dataSet) {
+        public virtual int UpdateAll(LocalInvPizzDBDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
