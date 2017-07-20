@@ -18,8 +18,8 @@ namespace InventarioPizzeriaDAL
                 cfg.CreateMap<Product, ProductDTO>();
                 cfg.CreateMap<ProductDTO, Product>();
 
-                cfg.CreateMap<BurntDough, BurntDoughDTO>();
-                cfg.CreateMap<BurntDoughDTO, BurntDough>();
+                cfg.CreateMap<Dough, DoughDTO>();
+                cfg.CreateMap<DoughDTO, Dough>();
             });
         }
     }

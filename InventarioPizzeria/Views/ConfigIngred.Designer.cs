@@ -48,9 +48,6 @@
             this.ProductoGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.localInvPizzDBDataSet = new InventarioPizzeria.LocalInvPizzDBDataSet();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productTableAdapter = new InventarioPizzeria.LocalInvPizzDBDataSetTableAdapters.ProductTableAdapter();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,9 +56,6 @@
             this.EditCell = new System.Windows.Forms.DataGridViewImageColumn();
             this.DeleteCell = new System.Windows.Forms.DataGridViewImageColumn();
             this.detailPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductoGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -234,7 +228,6 @@
             this.dataGridViewTextBoxColumn16,
             this.EditCell,
             this.DeleteCell});
-            this.ProductoGridView.DataSource = this.productBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Poet", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -281,20 +274,6 @@
             this.dataGridViewImageColumn2.ReadOnly = true;
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.Width = 50;
-            // 
-            // localInvPizzDBDataSet
-            // 
-            this.localInvPizzDBDataSet.DataSetName = "LocalInvPizzDBDataSet";
-            this.localInvPizzDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "Product";
-            this.productBindingSource.DataSource = this.localInvPizzDBDataSet;
-            // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -382,9 +361,6 @@
             this.Load += new System.EventHandler(this.ConfigIngred_Load);
             this.detailPanel.ResumeLayout(false);
             this.detailPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductoGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,9 +400,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private LocalInvPizzDBDataSet localInvPizzDBDataSet;
-        private System.Windows.Forms.BindingSource productBindingSource;
-        private LocalInvPizzDBDataSetTableAdapters.ProductTableAdapter productTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;

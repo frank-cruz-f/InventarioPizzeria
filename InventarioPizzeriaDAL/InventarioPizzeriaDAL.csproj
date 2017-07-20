@@ -60,16 +60,17 @@
   <ItemGroup>
     <Compile Include="AutomapperConfig.cs" />
     <Compile Include="DA\DataAccess.cs" />
-    <Compile Include="DA\BurntDoughDA.cs" />
+    <Compile Include="DA\DoughDA.cs" />
     <Compile Include="DA\ProductDA.cs" />
-    <Compile Include="DTO\BurntDoughDTO.cs" />
-    <Compile Include="DTO\ProductoDTO.cs" />
-    <Compile Include="Entities\BurntDough.cs" />
+    <Compile Include="DTO\DoughDTO.cs" />
+    <Compile Include="DTO\ProductDTO.cs" />
+    <Compile Include="Entities\Dough.cs" />
     <Compile Include="Entities\InvPizzeriaModel.cs" />
     <Compile Include="Entities\Product.cs" />
-    <Compile Include="Migrations\201706220425242_Initial.cs" />
-    <Compile Include="Migrations\201706220425242_Initial.Designer.cs">
-      <DependentUpon>201706220425242_Initial.cs</DependentUpon>
+    <Compile Include="Enums\DoughOperation.cs" />
+    <Compile Include="Migrations\201707200524525_Initial.cs" />
+    <Compile Include="Migrations\201707200524525_Initial.Designer.cs">
+      <DependentUpon>201707200524525_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,8 +83,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706220425242_Initial.resx">
-      <DependentUpon>201706220425242_Initial.cs</DependentUpon>
+    <Folder Include="ReportLoader\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707200524525_Initial.resx">
+      <DependentUpon>201707200524525_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

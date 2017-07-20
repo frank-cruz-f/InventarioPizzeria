@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DoughGridView = new System.Windows.Forms.DataGridView();
@@ -46,27 +45,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.localInvPizzDBDataSet1 = new InventarioPizzeria.LocalInvPizzDBDataSet1();
-            this.burntDoughBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.burntDoughTableAdapter = new InventarioPizzeria.LocalInvPizzDBDataSet1TableAdapters.BurntDoughTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grams = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Operation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EditCell = new System.Windows.Forms.DataGridViewImageColumn();
             this.DeleteCell = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DoughGridView)).BeginInit();
             this.detailPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.burntDoughBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DoughGridView
             // 
             this.DoughGridView.AllowUserToAddRows = false;
             this.DoughGridView.AllowUserToDeleteRows = false;
+            this.DoughGridView.AllowUserToResizeColumns = false;
             this.DoughGridView.AllowUserToResizeRows = false;
-            this.DoughGridView.AutoGenerateColumns = false;
             this.DoughGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -78,13 +73,13 @@
             this.DoughGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DoughGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DoughGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
+            this.Grams,
+            this.Date,
+            this.CookName,
+            this.ID,
+            this.Operation,
             this.EditCell,
             this.DeleteCell});
-            this.DoughGridView.DataSource = this.burntDoughBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Poet", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -255,80 +250,75 @@
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.Width = 50;
             // 
-            // localInvPizzDBDataSet1
+            // Grams
             // 
-            this.localInvPizzDBDataSet1.DataSetName = "LocalInvPizzDBDataSet1";
-            this.localInvPizzDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.Grams.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Grams.DataPropertyName = "Grams";
+            this.Grams.HeaderText = "Gramos";
+            this.Grams.MinimumWidth = 205;
+            this.Grams.Name = "Grams";
+            this.Grams.ReadOnly = true;
+            this.Grams.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Grams.Width = 205;
             // 
-            // burntDoughBindingSource
+            // Date
             // 
-            this.burntDoughBindingSource.DataMember = "BurntDough";
-            this.burntDoughBindingSource.DataSource = this.localInvPizzDBDataSet1;
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "Fecha";
+            this.Date.MinimumWidth = 200;
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Date.Width = 200;
             // 
-            // burntDoughTableAdapter
+            // CookName
             // 
-            this.burntDoughTableAdapter.ClearBeforeFill = true;
+            this.CookName.DataPropertyName = "CookName";
+            this.CookName.HeaderText = "Cocinero";
+            this.CookName.MinimumWidth = 200;
+            this.CookName.Name = "CookName";
+            this.CookName.ReadOnly = true;
+            this.CookName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.CookName.Width = 200;
             // 
-            // dataGridViewTextBoxColumn1
+            // ID
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            this.dataGridViewTextBoxColumn1.Width = 5;
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 20;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ID.Visible = false;
+            this.ID.Width = 20;
             // 
-            // dataGridViewTextBoxColumn2
+            // Operation
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "BurnedGrams";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Gramos Quemados";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "cookName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Cocinero";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 205;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 205;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "burntDate";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 200;
+            this.Operation.DataPropertyName = "Operation";
+            this.Operation.HeaderText = "Operation";
+            this.Operation.MinimumWidth = 20;
+            this.Operation.Name = "Operation";
+            this.Operation.ReadOnly = true;
+            this.Operation.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Operation.Visible = false;
+            this.Operation.Width = 20;
             // 
             // EditCell
             // 
-            this.EditCell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.EditCell.HeaderText = "";
             this.EditCell.Image = global::InventarioPizzeria.Resources.edit_interface_sign;
             this.EditCell.MinimumWidth = 50;
             this.EditCell.Name = "EditCell";
             this.EditCell.ReadOnly = true;
-            this.EditCell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.EditCell.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.EditCell.Width = 50;
             // 
             // DeleteCell
             // 
-            this.DeleteCell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.DeleteCell.HeaderText = "";
             this.DeleteCell.Image = global::InventarioPizzeria.Resources.trash;
             this.DeleteCell.MinimumWidth = 50;
             this.DeleteCell.Name = "DeleteCell";
             this.DeleteCell.ReadOnly = true;
-            this.DeleteCell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.DeleteCell.Width = 50;
             // 
             // BurntDough
@@ -346,8 +336,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DoughGridView)).EndInit();
             this.detailPanel.ResumeLayout(false);
             this.detailPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.burntDoughBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,7 +344,6 @@
         #endregion
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridView DoughGridView;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.TextBox cookTbx;
         private System.Windows.Forms.TextBox gramsTbx;
@@ -373,13 +360,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cookNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn burntDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DateTimePicker datePicker;
-        private LocalInvPizzDBDataSet1 localInvPizzDBDataSet1;
-        private System.Windows.Forms.BindingSource burntDoughBindingSource;
-        private LocalInvPizzDBDataSet1TableAdapters.BurntDoughTableAdapter burntDoughTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridView DoughGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grams;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CookName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Operation;
         private System.Windows.Forms.DataGridViewImageColumn EditCell;
         private System.Windows.Forms.DataGridViewImageColumn DeleteCell;
     }

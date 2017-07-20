@@ -8,13 +8,14 @@ namespace InventarioPizzeriaDAL.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.BurntDough",
+                "dbo.Doughs",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        BurnedGrams = c.Int(nullable: false),
-                        cookName = c.String(nullable: false),
-                        burntDate = c.DateTime(nullable: false),
+                        Grams = c.Int(nullable: false),
+                        CookName = c.String(nullable: false),
+                        Date = c.DateTime(nullable: false),
+                        Operation = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -35,7 +36,7 @@ namespace InventarioPizzeriaDAL.Migrations
         public override void Down()
         {
             DropTable("dbo.Product");
-            DropTable("dbo.BurntDough");
+            DropTable("dbo.Doughs");
         }
     }
 }

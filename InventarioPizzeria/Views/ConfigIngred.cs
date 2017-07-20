@@ -22,8 +22,7 @@ namespace InventarioPizzeria.Views
 
         private void ConfigIngred_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'localInvPizzDBDataSet.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.localInvPizzDBDataSet.Product);
+
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -46,7 +45,7 @@ namespace InventarioPizzeria.Views
 
         private void reloadGridView()
         {
-            this.productTableAdapter.Fill(this.localInvPizzDBDataSet.Product);
+
         }
 
         private void numericTexbox_TextChanged(object sender, EventArgs e)

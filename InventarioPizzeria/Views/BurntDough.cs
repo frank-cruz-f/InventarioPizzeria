@@ -1,5 +1,6 @@
 ﻿using InventarioPizzeriaDAL.DA;
 using InventarioPizzeriaDAL.DTO;
+using InventarioPizzeriaDAL.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,18 +17,29 @@ namespace InventarioPizzeria.Views
     {
         private int editingID;
         private bool editMode;
-        private BurntDoughDA dataAccess;
+        private DoughDA dataAccess;
 
         public BurntDough()
         {
             InitializeComponent();
-            dataAccess = new BurntDoughDA();
+            dataAccess = new DoughDA();
         }
 
         private void BurntDough_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'localInvPizzDBDataSet1.BurntDough' table. You can move, or remove it, as needed.
-            this.burntDoughTableAdapter.Fill(this.localInvPizzDBDataSet1.BurntDough);
+            dataAccess = new DoughDA();
+            InitializeGridView();
+        }
+
+        private void InitializeGridView()
+        {
+            DoughGridView.DataSource = dataAccess.getOperationDough(DoughOperation.Burnt);
+
+            DoughGridView.Columns["Grams"].DisplayIndex = 0;
+            DoughGridView.Columns["Date"].DisplayIndex = 1;
+            DoughGridView.Columns["CookName"].DisplayIndex = 2;
+            DoughGridView.Columns["EditCell"].DisplayIndex = 3;
+            DoughGridView.Columns["DeleteCell"].DisplayIndex = 4;
         }
 
         private void DoughGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,18 +51,17 @@ namespace InventarioPizzeria.Views
             {
                 try
                 {
-                    var boundItem = (DataRowView)senderGrid.Rows[e.RowIndex].DataBoundItem;
-                    var doughId = boundItem.Row.Field<int>("ID");
-                    if (e.ColumnIndex == 4)
+                    var dough = (DoughDTO)senderGrid.Rows[e.RowIndex].DataBoundItem;
+                    if (e.ColumnIndex == 0)
                     {
-                        populateEditBurntDough(doughId);
+                        populateEditBurntDough(dough);
                     }
-                    else if (e.ColumnIndex == 5)
+                    else if (e.ColumnIndex == 1)
                     {
-                        deleteBurntDough(doughId);
+                        deleteBurntDough(dough.ID);
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
 
                 }
@@ -61,24 +72,23 @@ namespace InventarioPizzeria.Views
         private void deleteBurntDough(int doughId)
         {
             dataAccess.deleteDough(doughId);
-            reloadGridView();
+            InitializeGridView();
         }
 
-        private void populateEditBurntDough(int doughId)
+        private void populateEditBurntDough(DoughDTO dough)
         {
             editMode = true;
-            editingID = doughId;
-            var dough = dataAccess.getDough(doughId);
-            gramsTbx.Text = dough.BurnedGrams.ToString();
-            cookTbx.Text = dough.cookName;
-            datePicker.Text = dough.burntDate.ToString();
+            editingID = dough.ID;
+            gramsTbx.Text = dough.Grams.ToString();
+            cookTbx.Text = dough.CookName;
+            datePicker.Text = dough.Date.ToString();
             detailPanel.Show();
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
             bool result;
-            BurntDoughDTO dough = new BurntDoughDTO(int.Parse(gramsTbx.Text), DateTime.Parse(datePicker.Text), cookTbx.Text);
+            DoughDTO dough = new DoughDTO(int.Parse(gramsTbx.Text), DateTime.Parse(datePicker.Text), cookTbx.Text, DoughOperation.Burnt);
             if (editMode)
             {
                 dough.ID = editingID;
@@ -105,12 +115,7 @@ namespace InventarioPizzeria.Views
             editMode = false;
             detailPanel.Hide();
 
-            reloadGridView();
-        }
-
-        private void reloadGridView()
-        {
-            this.burntDoughTableAdapter.Fill(this.localInvPizzDBDataSet1.BurntDough);
+            InitializeGridView();
         }
 
         private void addBtn_Click(object sender, EventArgs e)
