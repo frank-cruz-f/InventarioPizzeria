@@ -8,7 +8,7 @@ namespace InventarioPizzeriaDAL.DTO
 {
     public class ProductDTO
     {
-        public string Name;
+        public string ProductName;
         public string Code;
         public int CheeseGrams;
         public int DoughGrams;
@@ -16,10 +16,15 @@ namespace InventarioPizzeriaDAL.DTO
 
         public ProductDTO(string name, string code, int cheeseGrams, int doughGrams)
         {
-            this.Name = name;
+            this.ProductName = name;
             this.Code = code;
             this.CheeseGrams = cheeseGrams;
             this.DoughGrams = doughGrams;
+        }
+
+        public ProductDTO()
+        {
+
         }
     }
 }

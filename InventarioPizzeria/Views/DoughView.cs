@@ -13,16 +13,35 @@ using System.Windows.Forms;
 
 namespace InventarioPizzeria.Views
 {
-    public partial class BurntDough : Form
+    public partial class DoughView : Form
     {
         private int editingID;
         private bool editMode;
         private DoughDA dataAccess;
+        private DoughOperation operation;
 
-        public BurntDough()
+        public DoughView(DoughOperation operation)
         {
             InitializeComponent();
             dataAccess = new DoughDA();
+            this.operation = operation;
+            SetTitle(operation);
+        }
+
+        private void SetTitle(DoughOperation operation)
+        {
+            switch (operation)
+            {
+                case DoughOperation.Burnt:
+                    lblTitle.Text = "Masa Quemada";
+                    break;
+                case DoughOperation.Initial:
+                    lblTitle.Text = "Masa Inicial";
+                    break;
+                case DoughOperation.Remaining:
+                    lblTitle.Text = "Sobrante de Masa";
+                    break;
+            }
         }
 
         private void BurntDough_Load(object sender, EventArgs e)
@@ -33,7 +52,7 @@ namespace InventarioPizzeria.Views
 
         private void InitializeGridView()
         {
-            DoughGridView.DataSource = dataAccess.getOperationDough(DoughOperation.Burnt);
+            DoughGridView.DataSource = dataAccess.getOperationDough(operation);
 
             DoughGridView.Columns["Grams"].DisplayIndex = 0;
             DoughGridView.Columns["Date"].DisplayIndex = 1;
@@ -88,7 +107,7 @@ namespace InventarioPizzeria.Views
         private void saveBtn_Click(object sender, EventArgs e)
         {
             bool result;
-            DoughDTO dough = new DoughDTO(int.Parse(gramsTbx.Text), DateTime.Parse(datePicker.Text), cookTbx.Text, DoughOperation.Burnt);
+            DoughDTO dough = new DoughDTO(int.Parse(gramsTbx.Text), DateTime.Parse(datePicker.Text), cookTbx.Text, operation);
             if (editMode)
             {
                 dough.ID = editingID;

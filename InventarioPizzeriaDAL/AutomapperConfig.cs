@@ -20,6 +20,9 @@ namespace InventarioPizzeriaDAL
 
                 cfg.CreateMap<Dough, DoughDTO>();
                 cfg.CreateMap<DoughDTO, Dough>();
+
+                cfg.CreateMap<Report, ReportDTO>();
+                cfg.CreateMap<ReportDTO, Report>();
             });
         }
     }

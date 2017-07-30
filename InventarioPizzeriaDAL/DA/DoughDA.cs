@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using InventarioPizzeriaDAL.Enums;
+using System.Data.Entity.Core.Objects;
 
 namespace InventarioPizzeriaDAL.DA
 {
@@ -63,6 +64,11 @@ namespace InventarioPizzeriaDAL.DA
         public DoughDTO getDough(int doughId)
         {
             return Mapper.Map<DoughDTO>(context.Doughs.Where(d => d.ID.Equals(doughId)).FirstOrDefault());
+        }
+
+        public List<DoughDTO> getDoughsForDate(DateTime date)
+        {
+            return Mapper.Map<List<DoughDTO>>(context.Doughs.Where(d => DbFunctions.TruncateTime(d.Date) == DbFunctions.TruncateTime(date)).ToList().OrderBy(d => d.Operation));
         }
     }
 }

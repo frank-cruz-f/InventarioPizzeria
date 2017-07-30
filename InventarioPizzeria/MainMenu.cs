@@ -1,4 +1,5 @@
 ﻿using InventarioPizzeria.Views;
+using InventarioPizzeriaDAL.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,8 +27,31 @@ namespace InventarioPizzeria
 
         private void burntDoughBtn_Click(object sender, EventArgs e)
         {
-            BurntDough burntDough = new BurntDough();
+            DoughView burntDough = new DoughView(DoughOperation.Burnt);
             burntDough.ShowDialog();
+        }
+
+        private void initialDough_Click(object sender, EventArgs e)
+        {
+            DoughView initialDough = new DoughView(DoughOperation.Initial);
+            initialDough.ShowDialog();
+        }
+
+        private void doughCutBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DoughView remaining = new DoughView(DoughOperation.Remaining);
+            remaining.ShowDialog();
+        }
+
+        private void loadReportBtn_Click(object sender, EventArgs e)
+        {
+            ReportView report = new ReportView();
+            report.ShowDialog();
         }
     }
 }

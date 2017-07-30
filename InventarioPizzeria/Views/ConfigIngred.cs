@@ -11,8 +11,6 @@ namespace InventarioPizzeria.Views
         private ProductDA dataAccess;
         private bool editMode = false;
         private int editingID = 0;
-        private int editColumnIndex = 5;
-        private int deleteColumnIndex = 6;
 
         public ConfigIngred()
         {
@@ -22,7 +20,8 @@ namespace InventarioPizzeria.Views
 
         private void ConfigIngred_Load(object sender, EventArgs e)
         {
-
+            // TODO: This line of code loads data into the 'localInvPizzDBDataSet.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter1.Fill(this.localInvPizzDBDataSet.Product);
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -45,7 +44,7 @@ namespace InventarioPizzeria.Views
 
         private void reloadGridView()
         {
-
+            this.productTableAdapter1.Fill(this.localInvPizzDBDataSet.Product);
         }
 
         private void numericTexbox_TextChanged(object sender, EventArgs e)
@@ -113,7 +112,7 @@ namespace InventarioPizzeria.Views
             editMode = true;
             editingID = productId;
             var product = dataAccess.getProduct(productId);
-            nameTbx.Text = product.Name;
+            nameTbx.Text = product.ProductName;
             codeTbx.Text = product.Code;
             cheeseGramsTbx.Text = product.CheeseGrams.ToString();
             doughGramsTbx.Text = product.DoughGrams.ToString();

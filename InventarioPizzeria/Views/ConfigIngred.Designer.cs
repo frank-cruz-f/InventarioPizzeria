@@ -48,14 +48,20 @@
             this.ProductoGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EditCell = new System.Windows.Forms.DataGridViewImageColumn();
+            this.localInvPizzDBDataSet = new InventarioPizzeria.LocalInvPizzDBDataSet();
+            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.productTableAdapter1 = new InventarioPizzeria.LocalInvPizzDBDataSetTableAdapters.ProductTableAdapter();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteCell = new System.Windows.Forms.DataGridViewImageColumn();
+            this.EditCell = new System.Windows.Forms.DataGridViewImageColumn();
             this.detailPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductoGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -221,13 +227,14 @@
             this.ProductoGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ProductoGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductoGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.EditCell,
-            this.DeleteCell});
+            this.dataGridViewTextBoxColumn17,
+            this.productNameDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.DeleteCell,
+            this.EditCell});
+            this.ProductoGridView.DataSource = this.productBindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Poet", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -275,53 +282,74 @@
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.Width = 50;
             // 
-            // dataGridViewTextBoxColumn12
+            // localInvPizzDBDataSet
             // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn12.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Visible = false;
+            this.localInvPizzDBDataSet.DataSetName = "LocalInvPizzDBDataSet";
+            this.localInvPizzDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridViewTextBoxColumn13
+            // productBindingSource1
             // 
-            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 155;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 155;
+            this.productBindingSource1.DataMember = "Product";
+            this.productBindingSource1.DataSource = this.localInvPizzDBDataSet;
             // 
-            // dataGridViewTextBoxColumn14
+            // productTableAdapter1
             // 
-            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Code";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Codigo";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Width = 150;
+            this.productTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn15
+            // dataGridViewTextBoxColumn17
             // 
-            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "DoughGrams";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Gramos de Masa";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            this.dataGridViewTextBoxColumn15.Width = 150;
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn17.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Visible = false;
             // 
-            // dataGridViewTextBoxColumn16
+            // productNameDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "CheeseGrams";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Gramos de Queso";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            this.dataGridViewTextBoxColumn16.Width = 150;
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.productNameDataGridViewTextBoxColumn.MinimumWidth = 155;
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productNameDataGridViewTextBoxColumn.Width = 155;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Code";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "DoughGrams";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Gramos de Masa";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "CheeseGrams";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Gramos de Queso";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.Width = 150;
+            // 
+            // DeleteCell
+            // 
+            this.DeleteCell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.DeleteCell.HeaderText = "";
+            this.DeleteCell.Image = global::InventarioPizzeria.Resources.trash;
+            this.DeleteCell.MinimumWidth = 50;
+            this.DeleteCell.Name = "DeleteCell";
+            this.DeleteCell.ReadOnly = true;
+            this.DeleteCell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DeleteCell.Width = 50;
             // 
             // EditCell
             // 
@@ -334,17 +362,6 @@
             this.EditCell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.EditCell.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.EditCell.Width = 50;
-            // 
-            // DeleteCell
-            // 
-            this.DeleteCell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.DeleteCell.HeaderText = "";
-            this.DeleteCell.Image = global::InventarioPizzeria.Resources.trash;
-            this.DeleteCell.MinimumWidth = 50;
-            this.DeleteCell.Name = "DeleteCell";
-            this.DeleteCell.ReadOnly = true;
-            this.DeleteCell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DeleteCell.Width = 50;
             // 
             // ConfigIngred
             // 
@@ -361,6 +378,9 @@
             this.Load += new System.EventHandler(this.ConfigIngred_Load);
             this.detailPanel.ResumeLayout(false);
             this.detailPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductoGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,7 +425,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewImageColumn EditCell;
+        private LocalInvPizzDBDataSet localInvPizzDBDataSet;
+        private System.Windows.Forms.BindingSource productBindingSource1;
+        private LocalInvPizzDBDataSetTableAdapters.ProductTableAdapter productTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewImageColumn DeleteCell;
+        private System.Windows.Forms.DataGridViewImageColumn EditCell;
     }
 }

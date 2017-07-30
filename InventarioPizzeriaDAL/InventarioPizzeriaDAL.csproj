@@ -48,8 +48,10 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,15 +64,19 @@
     <Compile Include="DA\DataAccess.cs" />
     <Compile Include="DA\DoughDA.cs" />
     <Compile Include="DA\ProductDA.cs" />
+    <Compile Include="DA\ReportDA.cs" />
     <Compile Include="DTO\DoughDTO.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
+    <Compile Include="DTO\RecordDTO.cs" />
+    <Compile Include="DTO\ReportDTO.cs" />
     <Compile Include="Entities\Dough.cs" />
     <Compile Include="Entities\InvPizzeriaModel.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Report.cs" />
     <Compile Include="Enums\DoughOperation.cs" />
-    <Compile Include="Migrations\201707200524525_Initial.cs" />
-    <Compile Include="Migrations\201707200524525_Initial.Designer.cs">
-      <DependentUpon>201707200524525_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201707260015099_Initial.cs" />
+    <Compile Include="Migrations\201707260015099_Initial.Designer.cs">
+      <DependentUpon>201707260015099_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,8 +92,8 @@
     <Folder Include="ReportLoader\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201707200524525_Initial.resx">
-      <DependentUpon>201707200524525_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201707260015099_Initial.resx">
+      <DependentUpon>201707260015099_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

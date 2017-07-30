@@ -35,6 +35,9 @@
             this.loadReportBtn = new System.Windows.Forms.Button();
             this.burntDoughBtn = new System.Windows.Forms.Button();
             this.doughCutBtn = new System.Windows.Forms.Button();
+            this.initialDough = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +56,8 @@
             // 
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.configurarIngredientesToolStripMenuItem,
-            this.salirToolStripMenuItem});
+            this.salirToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.opcionesToolStripMenuItem.Font = new System.Drawing.Font("Poet", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(123, 30);
@@ -72,22 +76,23 @@
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Poet", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(324, 30);
-            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Text = "Configurar Cortes";
             // 
             // loadReportBtn
             // 
             this.loadReportBtn.Font = new System.Drawing.Font("Poet", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadReportBtn.Location = new System.Drawing.Point(338, 163);
+            this.loadReportBtn.Location = new System.Drawing.Point(316, 188);
             this.loadReportBtn.Name = "loadReportBtn";
             this.loadReportBtn.Size = new System.Drawing.Size(144, 81);
             this.loadReportBtn.TabIndex = 1;
             this.loadReportBtn.Text = "Cargar Reporte";
             this.loadReportBtn.UseVisualStyleBackColor = true;
+            this.loadReportBtn.Click += new System.EventHandler(this.loadReportBtn_Click);
             // 
             // burntDoughBtn
             // 
             this.burntDoughBtn.Font = new System.Drawing.Font("Poet", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.burntDoughBtn.Location = new System.Drawing.Point(446, 329);
+            this.burntDoughBtn.Location = new System.Drawing.Point(414, 329);
             this.burntDoughBtn.Name = "burntDoughBtn";
             this.burntDoughBtn.Size = new System.Drawing.Size(144, 81);
             this.burntDoughBtn.TabIndex = 3;
@@ -98,18 +103,50 @@
             // doughCutBtn
             // 
             this.doughCutBtn.Font = new System.Drawing.Font("Poet", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doughCutBtn.Location = new System.Drawing.Point(244, 329);
+            this.doughCutBtn.Location = new System.Drawing.Point(224, 329);
             this.doughCutBtn.Name = "doughCutBtn";
             this.doughCutBtn.Size = new System.Drawing.Size(144, 81);
             this.doughCutBtn.TabIndex = 4;
             this.doughCutBtn.Text = "Corte de Masa";
             this.doughCutBtn.UseVisualStyleBackColor = true;
+            this.doughCutBtn.Click += new System.EventHandler(this.doughCutBtn_Click);
+            // 
+            // initialDough
+            // 
+            this.initialDough.Font = new System.Drawing.Font("Poet", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.initialDough.Location = new System.Drawing.Point(34, 329);
+            this.initialDough.Name = "initialDough";
+            this.initialDough.Size = new System.Drawing.Size(144, 81);
+            this.initialDough.TabIndex = 5;
+            this.initialDough.Text = "Masa Inicial";
+            this.initialDough.UseVisualStyleBackColor = true;
+            this.initialDough.Click += new System.EventHandler(this.initialDough_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Poet", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(604, 329);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 81);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Sobrante de Masa";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Poet", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(324, 30);
+            this.toolStripMenuItem1.Text = "Salir";
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.initialDough);
             this.Controls.Add(this.doughCutBtn);
             this.Controls.Add(this.burntDoughBtn);
             this.Controls.Add(this.loadReportBtn);
@@ -133,6 +170,9 @@
         private System.Windows.Forms.Button loadReportBtn;
         private System.Windows.Forms.Button burntDoughBtn;
         private System.Windows.Forms.Button doughCutBtn;
+        private System.Windows.Forms.Button initialDough;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

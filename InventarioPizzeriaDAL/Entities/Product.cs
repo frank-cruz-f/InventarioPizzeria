@@ -14,7 +14,7 @@ namespace InventarioPizzeriaDAL.Entities
 
         [Required]
         [StringLength(50)]
-        public string Name { get; set; }
+        public string ProductName { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -26,7 +26,7 @@ namespace InventarioPizzeriaDAL.Entities
 
         internal Product copyValues(Product product)
         {
-            this.Name = product.Name;
+            this.ProductName = product.ProductName;
             this.Code = product.Code;
             this.DoughGrams = product.DoughGrams;
             this.CheeseGrams = product.CheeseGrams;

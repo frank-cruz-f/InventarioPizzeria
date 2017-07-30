@@ -13,10 +13,12 @@ namespace InventarioPizzeriaDAL.Entities
 
         public virtual DbSet<Dough> Doughs { get; set; }
 
+        public virtual DbSet<Report> Reports { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Product>()
-                .Property(e => e.Name)
+                .Property(e => e.ProductName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Product>()
