@@ -39,7 +39,8 @@ namespace InventarioPizzeria
 
         private void doughCutBtn_Click(object sender, EventArgs e)
         {
-            
+            DoughView cut = new DoughView(DoughOperation.Split);
+            cut.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)

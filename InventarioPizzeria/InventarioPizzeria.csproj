@@ -71,6 +71,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LocalInvPizzDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LocalInvPizzDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalInvPizzDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LocalInvPizzDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalInvPizzDBDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +93,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConfigCuts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConfigCuts.Designer.cs">
+      <DependentUpon>ConfigCuts.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\DoughView.cs">
       <SubType>Form</SubType>
@@ -118,6 +134,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConfigCuts.resx">
+      <DependentUpon>ConfigCuts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DoughView.resx">
       <DependentUpon>DoughView.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +156,28 @@
     </None>
     <None Include="LocalInvPizzDBDataSet.xss">
       <DependentUpon>LocalInvPizzDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LocalInvPizzDBDataSet1.xsc">
+      <DependentUpon>LocalInvPizzDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LocalInvPizzDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LocalInvPizzDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LocalInvPizzDBDataSet1.xss">
+      <DependentUpon>LocalInvPizzDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LocalInvPizzDBDataSet2.xsc">
+      <DependentUpon>LocalInvPizzDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="LocalInvPizzDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LocalInvPizzDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LocalInvPizzDBDataSet2.xss">
+      <DependentUpon>LocalInvPizzDBDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

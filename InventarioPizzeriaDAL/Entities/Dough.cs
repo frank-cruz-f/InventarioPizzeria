@@ -22,11 +22,14 @@ namespace InventarioPizzeriaDAL.Entities
 
         public DoughOperation Operation { get; set; }
 
+        public string Name { get; set; }
+
         internal Dough copyValues(Dough dough)
         {
             this.Grams = dough.Grams;
             this.CookName = dough.CookName;
             this.Date = dough.Date;
+            this.Name = dough.Name;
             return this;
         }
     }

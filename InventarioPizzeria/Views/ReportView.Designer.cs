@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.initialDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.generateReportBtn = new System.Windows.Forms.Button();
+            this.finalDatePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // datePicker
+            // initialDatePicker
             // 
-            this.datePicker.CustomFormat = "";
-            this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePicker.Location = new System.Drawing.Point(323, 196);
-            this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(112, 20);
-            this.datePicker.TabIndex = 17;
+            this.initialDatePicker.CustomFormat = "";
+            this.initialDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.initialDatePicker.Location = new System.Drawing.Point(252, 200);
+            this.initialDatePicker.Name = "initialDatePicker";
+            this.initialDatePicker.Size = new System.Drawing.Size(112, 20);
+            this.initialDatePicker.TabIndex = 17;
             // 
             // label5
             // 
@@ -63,13 +64,23 @@
             this.generateReportBtn.UseVisualStyleBackColor = true;
             this.generateReportBtn.Click += new System.EventHandler(this.generateReportBtn_Click);
             // 
+            // finalDatePicker
+            // 
+            this.finalDatePicker.CustomFormat = "";
+            this.finalDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.finalDatePicker.Location = new System.Drawing.Point(391, 200);
+            this.finalDatePicker.Name = "finalDatePicker";
+            this.finalDatePicker.Size = new System.Drawing.Size(112, 20);
+            this.finalDatePicker.TabIndex = 19;
+            // 
             // ReportView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.finalDatePicker);
             this.Controls.Add(this.generateReportBtn);
-            this.Controls.Add(this.datePicker);
+            this.Controls.Add(this.initialDatePicker);
             this.Controls.Add(this.label5);
             this.Name = "ReportView";
             this.Text = "ReportView";
@@ -80,8 +91,9 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker datePicker;
+        private System.Windows.Forms.DateTimePicker initialDatePicker;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button generateReportBtn;
+        private System.Windows.Forms.DateTimePicker finalDatePicker;
     }
 }

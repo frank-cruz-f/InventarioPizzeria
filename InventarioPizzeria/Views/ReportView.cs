@@ -64,10 +64,10 @@ namespace InventarioPizzeria.Views
         private void calculateReportValues()
         {
             
-            var doughsForDate = doughDA.getDoughsForDate(datePicker.Value);
+            var doughsForDate = doughDA.getDoughsForDate(initialDatePicker.Value, finalDatePicker.Value);
             var products = productDA.getProducts();
-            var initialDough = doughsForDate.Where(d => d.Operation.Equals(DoughOperation.Initial)).FirstOrDefault();
-            var remainingDough = doughsForDate.Where(d => d.Operation.Equals(DoughOperation.Remaining)).FirstOrDefault();
+            var initialDough = doughsForDate.Where(d => d.Operation.Equals(DoughOperation.Initial));
+            var remainingDough = doughsForDate.Where(d => d.Operation.Equals(DoughOperation.Remaining));
             var burntDough = doughsForDate.Where(d => d.Operation.Equals(DoughOperation.Burnt)).ToList();
             var splitDough = doughsForDate.Where(d => d.Operation.Equals(DoughOperation.Split)).ToList();
             var spentDough = 0;
@@ -93,14 +93,15 @@ namespace InventarioPizzeria.Views
             var remainingDoughQuantity = 0;
             var burntDoughQuantity = 0;
             var initialDoughQuantity = 0;
+            var splitDoughQuantity = 0;
             if(initialDough != null)
             {
-                initialDoughQuantity = initialDough.Grams;
+                initialDoughQuantity = initialDough.Sum(i => i.Grams); ;
             }
 
             if(remainingDough != null)
             {
-                remainingDoughQuantity = remainingDough.Grams;
+                remainingDoughQuantity = remainingDough.Sum(r => r.Grams);
             }
 
             if(burntDough != null)
@@ -108,7 +109,12 @@ namespace InventarioPizzeria.Views
                 burntDoughQuantity = burntDough.Sum(b => b.Grams);
             }
 
-            var report = new ReportDTO(spentDough, initialDoughQuantity, remainingDoughQuantity, burntDoughQuantity, spentCheese);
+            if(splitDough != null)
+            {
+                splitDoughQuantity = splitDough.Sum(s => s.Grams);
+            }
+
+            var report = new ReportDTO(spentDough, initialDoughQuantity, remainingDoughQuantity, burntDoughQuantity, splitDoughQuantity, spentCheese);
             reportDA.saveReport(report);
             report.print();
         }

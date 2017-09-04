@@ -73,11 +73,11 @@ namespace InventarioPizzeria.Views
                     var dough = (DoughDTO)senderGrid.Rows[e.RowIndex].DataBoundItem;
                     if (e.ColumnIndex == 0)
                     {
-                        populateEditBurntDough(dough);
+                        populateEditDough(dough);
                     }
                     else if (e.ColumnIndex == 1)
                     {
-                        deleteBurntDough(dough.ID);
+                        deleteDough(dough.ID);
                     }
                 }
                 catch (Exception ex)
@@ -88,13 +88,13 @@ namespace InventarioPizzeria.Views
             }
         }
 
-        private void deleteBurntDough(int doughId)
+        private void deleteDough(int doughId)
         {
             dataAccess.deleteDough(doughId);
             InitializeGridView();
         }
 
-        private void populateEditBurntDough(DoughDTO dough)
+        private void populateEditDough(DoughDTO dough)
         {
             editMode = true;
             editingID = dough.ID;

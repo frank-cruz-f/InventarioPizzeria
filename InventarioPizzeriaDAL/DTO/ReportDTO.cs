@@ -14,6 +14,7 @@ namespace InventarioPizzeriaDAL.DTO
         int burntDough;
         int spentCheese;
         private string date;
+        private int splitDough;
 
         public int SpentDough
         {
@@ -93,18 +94,32 @@ namespace InventarioPizzeriaDAL.DTO
             }
         }
 
+        public int SplitDough
+        {
+            get
+            {
+                return splitDough;
+            }
+
+            set
+            {
+                splitDough = value;
+            }
+        }
+
         public ReportDTO()
         {
 
         }
 
-        public ReportDTO(int spentDough, int initialDough, int remainingDough, int burntDough, int spentCheese)
+        public ReportDTO(int spentDough, int initialDough, int remainingDough, int burntDough, int splitDough, int spentCheese)
         {
             this.spentDough = spentDough;
             this.initialDough = initialDough;
             this.remainingDough = remainingDough;
             this.burntDough = burntDough;
             this.spentCheese = spentCheese;
+            this.splitDough = splitDough;
         }
 
         public void print()
@@ -167,11 +182,13 @@ namespace InventarioPizzeriaDAL.DTO
             Offset = Offset + 20;
             graphics.DrawString("Masa quemada = " + burntDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
+            graphics.DrawString("Cortes de masa = " + splitDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
+            Offset = Offset + 20;
             graphics.DrawString("Masa sobrante = " + remainingDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
             graphics.DrawString(underLine, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
-            String Grosstotal = "Diferencia de masa = " + (initialDough - spentDough - remainingDough - burntDough);
+            String Grosstotal = "Diferencia de masa = " + (initialDough - spentDough - remainingDough - burntDough - splitDough);
             graphics.DrawString(Grosstotal, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
         }
     }

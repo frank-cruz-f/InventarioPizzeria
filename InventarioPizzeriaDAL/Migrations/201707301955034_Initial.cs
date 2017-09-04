@@ -16,6 +16,7 @@ namespace InventarioPizzeriaDAL.Migrations
                         CookName = c.String(nullable: false),
                         Date = c.DateTime(nullable: false),
                         Operation = c.Int(nullable: false),
+                        Name = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
             

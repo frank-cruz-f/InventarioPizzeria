@@ -45,6 +45,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CAF64B7921964E4C9E3D7CEEF334F1E5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D3B660C6F28BBD95C6BDB6BA64B91721"
         "OwnerKey" = "8:_DF2BDC2276514A0B8925339F12292B4E"
         "MsmSig" = "8:_UNDEFINED"
@@ -81,8 +87,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C706F9C014115D313E90D1DBF748B7A8"
+        "MsmKey" = "8:_F88220185A914FCC96F7619649B8019B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FB26CE6104BAE9C0A2CCDCEAB7137668"
+        "OwnerKey" = "8:_DF2BDC2276514A0B8925339F12292B4E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,6 +118,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FB26CE6104BAE9C0A2CCDCEAB7137668"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3F912EA0745EA61BC92726010825010B"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -119,6 +137,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D3B660C6F28BBD95C6BDB6BA64B91721"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C706F9C014115D313E90D1DBF748B7A8"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -171,6 +195,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -324,6 +356,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CAF64B7921964E4C9E3D7CEEF334F1E5"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\LocalInvPizzDB_log.ldf"
+            "TargetName" = "8:LocalInvPizzDB_log.ldf"
+            "Tag" = "8:"
+            "Folder" = "8:_FF054F25207149E3B0E8B868076B8BB1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D3B660C6F28BBD95C6BDB6BA64B91721"
             {
             "AssemblyRegister" = "3:1"
@@ -369,6 +421,57 @@
                     }
                 }
             "SourcePath" = "8:EntityFramework.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_FF054F25207149E3B0E8B868076B8BB1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F88220185A914FCC96F7619649B8019B"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\LocalInvPizzDB.mdf"
+            "TargetName" = "8:LocalInvPizzDB.mdf"
+            "Tag" = "8:"
+            "Folder" = "8:_FF054F25207149E3B0E8B868076B8BB1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FB26CE6104BAE9C0A2CCDCEAB7137668"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FB26CE6104BAE9C0A2CCDCEAB7137668"
+                    {
+                    "Name" = "8:CsvHelper.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:CsvHelper.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_FF054F25207149E3B0E8B868076B8BB1"

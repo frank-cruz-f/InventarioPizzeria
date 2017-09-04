@@ -66,9 +66,9 @@ namespace InventarioPizzeriaDAL.DA
             return Mapper.Map<DoughDTO>(context.Doughs.Where(d => d.ID.Equals(doughId)).FirstOrDefault());
         }
 
-        public List<DoughDTO> getDoughsForDate(DateTime date)
+        public List<DoughDTO> getDoughsForDate(DateTime initialDate, DateTime finalDate)
         {
-            return Mapper.Map<List<DoughDTO>>(context.Doughs.Where(d => DbFunctions.TruncateTime(d.Date) == DbFunctions.TruncateTime(date)).ToList().OrderBy(d => d.Operation));
+            return Mapper.Map<List<DoughDTO>>(context.Doughs.Where(d => DbFunctions.TruncateTime(d.Date) >= DbFunctions.TruncateTime(initialDate) && DbFunctions.TruncateTime(d.Date) <= DbFunctions.TruncateTime(finalDate)).ToList().OrderBy(d => d.Operation));
         }
     }
 }
