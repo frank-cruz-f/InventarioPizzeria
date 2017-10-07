@@ -202,6 +202,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
     }
@@ -545,15 +553,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:InventarioPizzeria"
-        "ProductCode" = "8:{F6B7A817-571B-41C4-8941-4DB0258D4A6F}"
-        "PackageCode" = "8:{4A11E5CD-1FCE-496F-A4CD-98742D37A3BE}"
+        "ProductCode" = "8:{846C4986-8B39-4FB1-AC47-E79B587A98C5}"
+        "PackageCode" = "8:{E112E185-F2FB-46B8-8A39-29118CEDE1FF}"
         "UpgradeCode" = "8:{62E82EE8-16B7-47AD-A499-D0A3E1859409}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:FranksSoft"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

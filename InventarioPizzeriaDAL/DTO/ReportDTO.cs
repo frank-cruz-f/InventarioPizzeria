@@ -163,7 +163,7 @@ namespace InventarioPizzeriaDAL.DTO
             Font font = new Font("Courier New", 10);
             String underLine = "------------------------------------------";
             float fontHeight = font.GetHeight();
-            int startX = 50;
+            int startX = 30;
             int startY = 55;
             int Offset = 40;
             graphics.DrawString("Jerry's Pizza", new Font("Courier New", 14), new SolidBrush(Color.Black), startX, startY + Offset);
@@ -188,7 +188,7 @@ namespace InventarioPizzeriaDAL.DTO
             Offset = Offset + 20;
             graphics.DrawString(underLine, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
-            String Grosstotal = "Diferencia de masa = " + (initialDough - spentDough - remainingDough - burntDough - splitDough);
+            String Grosstotal = "Dif de masa = " + (initialDough - spentDough - remainingDough - burntDough - splitDough);
             graphics.DrawString(Grosstotal, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
         }
     }

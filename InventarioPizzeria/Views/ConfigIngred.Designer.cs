@@ -46,11 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.addBtn = new System.Windows.Forms.Button();
             this.ProductoGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.localInvPizzDBDataSet = new InventarioPizzeria.LocalInvPizzDBDataSet();
-            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.productTableAdapter1 = new InventarioPizzeria.LocalInvPizzDBDataSetTableAdapters.ProductTableAdapter();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,10 +53,15 @@
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteCell = new System.Windows.Forms.DataGridViewImageColumn();
             this.EditCell = new System.Windows.Forms.DataGridViewImageColumn();
+            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.localInvPizzDBDataSet = new InventarioPizzeria.LocalInvPizzDBDataSet();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.productTableAdapter1 = new InventarioPizzeria.LocalInvPizzDBDataSetTableAdapters.ProductTableAdapter();
             this.detailPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -101,7 +101,6 @@
             this.cheeseGramsTbx.Size = new System.Drawing.Size(142, 21);
             this.cheeseGramsTbx.TabIndex = 15;
             this.cheeseGramsTbx.Text = "0";
-            this.cheeseGramsTbx.UseWaitCursor = true;
             this.cheeseGramsTbx.TextChanged += new System.EventHandler(this.numericTexbox_TextChanged);
             // 
             // doughGramsTbx
@@ -259,43 +258,6 @@
             this.ProductoGridView.TabIndex = 17;
             this.ProductoGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductoGridView_CellContentClick);
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::InventarioPizzeria.Resources.edit_interface_sign;
-            this.dataGridViewImageColumn1.MinimumWidth = 50;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn1.Width = 50;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::InventarioPizzeria.Resources.trash;
-            this.dataGridViewImageColumn2.MinimumWidth = 50;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn2.Width = 50;
-            // 
-            // localInvPizzDBDataSet
-            // 
-            this.localInvPizzDBDataSet.DataSetName = "LocalInvPizzDBDataSet";
-            this.localInvPizzDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productBindingSource1
-            // 
-            this.productBindingSource1.DataMember = "Product";
-            this.productBindingSource1.DataSource = this.localInvPizzDBDataSet;
-            // 
-            // productTableAdapter1
-            // 
-            this.productTableAdapter1.ClearBeforeFill = true;
-            // 
             // dataGridViewTextBoxColumn17
             // 
             this.dataGridViewTextBoxColumn17.DataPropertyName = "ID";
@@ -363,6 +325,43 @@
             this.EditCell.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.EditCell.Width = 50;
             // 
+            // productBindingSource1
+            // 
+            this.productBindingSource1.DataMember = "Product";
+            this.productBindingSource1.DataSource = this.localInvPizzDBDataSet;
+            // 
+            // localInvPizzDBDataSet
+            // 
+            this.localInvPizzDBDataSet.DataSetName = "LocalInvPizzDBDataSet";
+            this.localInvPizzDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::InventarioPizzeria.Resources.edit_interface_sign;
+            this.dataGridViewImageColumn1.MinimumWidth = 50;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::InventarioPizzeria.Resources.trash;
+            this.dataGridViewImageColumn2.MinimumWidth = 50;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.Width = 50;
+            // 
+            // productTableAdapter1
+            // 
+            this.productTableAdapter1.ClearBeforeFill = true;
+            // 
             // ConfigIngred
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -379,8 +378,8 @@
             this.detailPanel.ResumeLayout(false);
             this.detailPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

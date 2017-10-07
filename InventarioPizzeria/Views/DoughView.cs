@@ -145,7 +145,7 @@ namespace InventarioPizzeria.Views
         private void numericTexbox_TextChanged(object sender, EventArgs e)
         {
             TextBox senderButton = (TextBox)sender;
-            if (System.Text.RegularExpressions.Regex.IsMatch(senderButton.Text, "[^0-9]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(senderButton.Text, "[^-0-9]"))
             {
                 MessageBox.Show("Por favor usar solo numeros");
                 senderButton.Text = senderButton.Text.Remove(senderButton.Text.Length - 1);
