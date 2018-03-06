@@ -23,6 +23,12 @@ namespace InventarioPizzeriaDAL
 
                 cfg.CreateMap<Report, ReportDTO>();
                 cfg.CreateMap<ReportDTO, Report>();
+
+                cfg.CreateMap<Shop, ShopDTO>();
+                cfg.CreateMap<ShopDTO, Shop>();
+
+                cfg.CreateMap<User, UserDTO>();
+                cfg.CreateMap<UserDTO, User>();
             });
         }
     }

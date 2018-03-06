@@ -49,9 +49,9 @@ namespace InventarioPizzeriaDAL.DA
             return result;
         }
 
-        public List<DoughDTO> getOperationDough(DoughOperation operation)
+        public List<DoughDTO> getOperationDough(DoughOperation operation, int currentShop)
         {
-            return Mapper.Map<List<DoughDTO>>(context.Doughs.Where(d => d.Operation == operation).ToList());
+            return Mapper.Map<List<DoughDTO>>(context.Doughs.Where(d => d.Operation == operation && d.ShopId == currentShop).ToList());
         }
 
         public void deleteDough(int doughId)
@@ -66,9 +66,9 @@ namespace InventarioPizzeriaDAL.DA
             return Mapper.Map<DoughDTO>(context.Doughs.Where(d => d.ID.Equals(doughId)).FirstOrDefault());
         }
 
-        public List<DoughDTO> getDoughsForDate(DateTime initialDate, DateTime finalDate)
+        public List<DoughDTO> getDoughsForDate(DateTime initialDate, DateTime finalDate, int currentShop)
         {
-            return Mapper.Map<List<DoughDTO>>(context.Doughs.Where(d => DbFunctions.TruncateTime(d.Date) >= DbFunctions.TruncateTime(initialDate) && DbFunctions.TruncateTime(d.Date) <= DbFunctions.TruncateTime(finalDate)).ToList().OrderBy(d => d.Operation));
+            return Mapper.Map<List<DoughDTO>>(context.Doughs.Where(d => DbFunctions.TruncateTime(d.Date) >= DbFunctions.TruncateTime(initialDate) && DbFunctions.TruncateTime(d.Date) <= DbFunctions.TruncateTime(finalDate) && d.ShopId == currentShop).ToList().OrderBy(d => d.Operation));
         }
     }
 }

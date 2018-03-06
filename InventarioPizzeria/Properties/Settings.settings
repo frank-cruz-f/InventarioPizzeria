@@ -2,21 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="InventarioPizzeria.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="InventarioPizzeriaConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=ELIA\SQLSERVER;Initial Catalog=InventarioPizzeria;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=ELIA\SQLSERVER;Initial Catalog=InventarioPizzeria;Integrated Security=True</Value>
-    </Setting>
-    <Setting Name="LocalInvPizzDBConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=(localdb)\v11.0;Initial Catalog=LocalInvPizzDB;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=(localdb)\v11.0;Initial Catalog=LocalInvPizzDB;Integrated Security=True</Value>
+    <Setting Name="CloudInvDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=den1.mssql3.gear.host;Initial Catalog=invpizzeriadb;Username=invpizzeriadb;Password=!cloud1nvdb</Value>
     </Setting>
   </Settings>
 </SettingsFile>

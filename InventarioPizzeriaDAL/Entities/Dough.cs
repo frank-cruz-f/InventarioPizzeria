@@ -23,6 +23,11 @@ namespace InventarioPizzeriaDAL.Entities
         public DoughOperation Operation { get; set; }
 
         public string Name { get; set; }
+    
+        public int ShopId { get; set; }
+
+        [ForeignKey("ShopId")]
+        public virtual Shop Shop { get; set; }
 
         internal Dough copyValues(Dough dough)
         {
@@ -30,6 +35,7 @@ namespace InventarioPizzeriaDAL.Entities
             this.CookName = dough.CookName;
             this.Date = dough.Date;
             this.Name = dough.Name;
+            this.ShopId = dough.ShopId;
             return this;
         }
     }

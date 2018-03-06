@@ -14,6 +14,8 @@ namespace InventarioPizzeriaDAL.Entities
         public virtual DbSet<Dough> Doughs { get; set; }
 
         public virtual DbSet<Report> Reports { get; set; }
+        public virtual DbSet<Shop> Shops { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

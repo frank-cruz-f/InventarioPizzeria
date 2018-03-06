@@ -65,24 +65,49 @@
     <Compile Include="DA\DoughDA.cs" />
     <Compile Include="DA\ProductDA.cs" />
     <Compile Include="DA\ReportDA.cs" />
+    <Compile Include="DA\ShopDA.cs" />
+    <Compile Include="DA\UserDA.cs" />
     <Compile Include="DTO\DoughDTO.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="DTO\RecordDTO.cs" />
     <Compile Include="DTO\ReportDTO.cs" />
+    <Compile Include="DTO\ShopDTO.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="Entities\Dough.cs" />
     <Compile Include="Entities\InvPizzeriaModel.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Report.cs" />
+    <Compile Include="Entities\Shop.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Enums\DoughOperation.cs" />
+    <Compile Include="Enums\UserType.cs" />
     <Compile Include="Migrations\201707301955034_Initial.cs" />
     <Compile Include="Migrations\201707301955034_Initial.Designer.cs">
       <DependentUpon>201707301955034_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802241912262_ShopsAndUsers.cs" />
+    <Compile Include="Migrations\201802241912262_ShopsAndUsers.Designer.cs">
+      <DependentUpon>201802241912262_ShopsAndUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802241934500_ShopsAndUsers2.cs" />
+    <Compile Include="Migrations\201802241934500_ShopsAndUsers2.Designer.cs">
+      <DependentUpon>201802241934500_ShopsAndUsers2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802242023133_ShopsAndUsers3.cs" />
+    <Compile Include="Migrations\201802242023133_ShopsAndUsers3.Designer.cs">
+      <DependentUpon>201802242023133_ShopsAndUsers3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803061753216_ShopUsers2.cs" />
+    <Compile Include="Migrations\201803061753216_ShopUsers2.Designer.cs">
+      <DependentUpon>201803061753216_ShopUsers2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +119,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201707301955034_Initial.resx">
       <DependentUpon>201707301955034_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802241912262_ShopsAndUsers.resx">
+      <DependentUpon>201802241912262_ShopsAndUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802241934500_ShopsAndUsers2.resx">
+      <DependentUpon>201802241934500_ShopsAndUsers2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802242023133_ShopsAndUsers3.resx">
+      <DependentUpon>201802242023133_ShopsAndUsers3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803061753216_ShopUsers2.resx">
+      <DependentUpon>201803061753216_ShopUsers2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -23,7 +23,9 @@ namespace InventarioPizzeria
             AutomapperConfig.MapperConfig();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+            var loginView = new LoginView();
+            loginView.Show();
+            Application.Run();
         }
     }
 }

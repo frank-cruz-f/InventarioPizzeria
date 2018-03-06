@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,31 +45,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.addBtn = new System.Windows.Forms.Button();
             this.ProductoGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeleteCell = new System.Windows.Forms.DataGridViewImageColumn();
-            this.EditCell = new System.Windows.Forms.DataGridViewImageColumn();
-            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.localInvPizzDBDataSet = new InventarioPizzeria.LocalInvPizzDBDataSet();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.productTableAdapter1 = new InventarioPizzeria.LocalInvPizzDBDataSetTableAdapters.ProductTableAdapter();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DoughGrams = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CheeseGrams = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EditCell = new System.Windows.Forms.DataGridViewImageColumn();
+            this.DeleteCell = new System.Windows.Forms.DataGridViewImageColumn();
             this.detailPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poet", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 33);
+            this.label1.Size = new System.Drawing.Size(137, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Productos";
             // 
@@ -98,7 +92,7 @@
             this.cheeseGramsTbx.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.cheeseGramsTbx.Location = new System.Drawing.Point(341, 129);
             this.cheeseGramsTbx.Name = "cheeseGramsTbx";
-            this.cheeseGramsTbx.Size = new System.Drawing.Size(142, 21);
+            this.cheeseGramsTbx.Size = new System.Drawing.Size(142, 20);
             this.cheeseGramsTbx.TabIndex = 15;
             this.cheeseGramsTbx.Text = "0";
             this.cheeseGramsTbx.TextChanged += new System.EventHandler(this.numericTexbox_TextChanged);
@@ -107,7 +101,7 @@
             // 
             this.doughGramsTbx.Location = new System.Drawing.Point(143, 129);
             this.doughGramsTbx.Name = "doughGramsTbx";
-            this.doughGramsTbx.Size = new System.Drawing.Size(142, 21);
+            this.doughGramsTbx.Size = new System.Drawing.Size(142, 20);
             this.doughGramsTbx.TabIndex = 14;
             this.doughGramsTbx.Text = "0";
             this.doughGramsTbx.TextChanged += new System.EventHandler(this.numericTexbox_TextChanged);
@@ -116,59 +110,59 @@
             // 
             this.codeTbx.Location = new System.Drawing.Point(341, 64);
             this.codeTbx.Name = "codeTbx";
-            this.codeTbx.Size = new System.Drawing.Size(142, 21);
+            this.codeTbx.Size = new System.Drawing.Size(142, 20);
             this.codeTbx.TabIndex = 13;
             // 
             // nameTbx
             // 
             this.nameTbx.Location = new System.Drawing.Point(143, 64);
             this.nameTbx.Name = "nameTbx";
-            this.nameTbx.Size = new System.Drawing.Size(142, 21);
+            this.nameTbx.Size = new System.Drawing.Size(142, 20);
             this.nameTbx.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Poet", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(337, 106);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 20);
+            this.label6.Size = new System.Drawing.Size(139, 20);
             this.label6.TabIndex = 11;
             this.label6.Text = "Gramos de Queso";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poet", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(337, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 20);
+            this.label5.Size = new System.Drawing.Size(59, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Código";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poet", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(139, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 20);
+            this.label4.Size = new System.Drawing.Size(131, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Gramos de Masa";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poet", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(139, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 20);
+            this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Nombre";
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Font = new System.Drawing.Font("Poet", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelBtn.Location = new System.Drawing.Point(516, 152);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(97, 33);
@@ -179,7 +173,7 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Font = new System.Drawing.Font("Poet", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.Location = new System.Drawing.Point(619, 152);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(87, 33);
@@ -191,16 +185,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poet", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(-6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 26);
+            this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Producto";
             // 
             // addBtn
             // 
-            this.addBtn.Font = new System.Drawing.Font("Poet", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.Location = new System.Drawing.Point(590, 63);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(156, 36);
@@ -214,11 +208,10 @@
             this.ProductoGridView.AllowUserToAddRows = false;
             this.ProductoGridView.AllowUserToDeleteRows = false;
             this.ProductoGridView.AllowUserToResizeRows = false;
-            this.ProductoGridView.AutoGenerateColumns = false;
             this.ProductoGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poet", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
@@ -226,17 +219,16 @@
             this.ProductoGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ProductoGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductoGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn17,
-            this.productNameDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.DeleteCell,
-            this.EditCell});
-            this.ProductoGridView.DataSource = this.productBindingSource1;
+            this.Code,
+            this.ProductName,
+            this.DoughGrams,
+            this.CheeseGrams,
+            this.ID,
+            this.EditCell,
+            this.DeleteCell});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poet", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -257,83 +249,6 @@
             this.ProductoGridView.Size = new System.Drawing.Size(710, 224);
             this.ProductoGridView.TabIndex = 17;
             this.ProductoGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductoGridView_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn17.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            this.dataGridViewTextBoxColumn17.Visible = false;
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.productNameDataGridViewTextBoxColumn.MinimumWidth = 155;
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productNameDataGridViewTextBoxColumn.Width = 155;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Code";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn18.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            this.dataGridViewTextBoxColumn18.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "DoughGrams";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Gramos de Masa";
-            this.dataGridViewTextBoxColumn19.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            this.dataGridViewTextBoxColumn19.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "CheeseGrams";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Gramos de Queso";
-            this.dataGridViewTextBoxColumn20.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            this.dataGridViewTextBoxColumn20.Width = 150;
-            // 
-            // DeleteCell
-            // 
-            this.DeleteCell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.DeleteCell.HeaderText = "";
-            this.DeleteCell.Image = global::InventarioPizzeria.Resources.trash;
-            this.DeleteCell.MinimumWidth = 50;
-            this.DeleteCell.Name = "DeleteCell";
-            this.DeleteCell.ReadOnly = true;
-            this.DeleteCell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DeleteCell.Width = 50;
-            // 
-            // EditCell
-            // 
-            this.EditCell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.EditCell.HeaderText = "";
-            this.EditCell.Image = global::InventarioPizzeria.Resources.edit_interface_sign;
-            this.EditCell.MinimumWidth = 50;
-            this.EditCell.Name = "EditCell";
-            this.EditCell.ReadOnly = true;
-            this.EditCell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.EditCell.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.EditCell.Width = 50;
-            // 
-            // productBindingSource1
-            // 
-            this.productBindingSource1.DataMember = "Product";
-            this.productBindingSource1.DataSource = this.localInvPizzDBDataSet;
-            // 
-            // localInvPizzDBDataSet
-            // 
-            this.localInvPizzDBDataSet.DataSetName = "LocalInvPizzDBDataSet";
-            this.localInvPizzDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewImageColumn1
             // 
@@ -358,28 +273,88 @@
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.Width = 50;
             // 
-            // productTableAdapter1
+            // Code
             // 
-            this.productTableAdapter1.ClearBeforeFill = true;
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Codigo";
+            this.Code.MinimumWidth = 155;
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            this.Code.Width = 155;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "Nombre";
+            this.ProductName.MinimumWidth = 155;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            this.ProductName.Width = 155;
+            // 
+            // DoughGrams
+            // 
+            this.DoughGrams.DataPropertyName = "DoughGrams";
+            this.DoughGrams.HeaderText = "Gramos de Masa";
+            this.DoughGrams.MinimumWidth = 150;
+            this.DoughGrams.Name = "DoughGrams";
+            this.DoughGrams.ReadOnly = true;
+            this.DoughGrams.Width = 150;
+            // 
+            // CheeseGrams
+            // 
+            this.CheeseGrams.DataPropertyName = "CheeseGrams";
+            this.CheeseGrams.HeaderText = "Gramos de Queso";
+            this.CheeseGrams.MinimumWidth = 150;
+            this.CheeseGrams.Name = "CheeseGrams";
+            this.CheeseGrams.ReadOnly = true;
+            this.CheeseGrams.Width = 150;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // EditCell
+            // 
+            this.EditCell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.EditCell.HeaderText = "";
+            this.EditCell.Image = global::InventarioPizzeria.Resources.edit_interface_sign;
+            this.EditCell.MinimumWidth = 50;
+            this.EditCell.Name = "EditCell";
+            this.EditCell.ReadOnly = true;
+            this.EditCell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.EditCell.Width = 50;
+            // 
+            // DeleteCell
+            // 
+            this.DeleteCell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.DeleteCell.HeaderText = "";
+            this.DeleteCell.Image = global::InventarioPizzeria.Resources.trash;
+            this.DeleteCell.MinimumWidth = 50;
+            this.DeleteCell.Name = "DeleteCell";
+            this.DeleteCell.ReadOnly = true;
+            this.DeleteCell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DeleteCell.Width = 50;
             // 
             // ConfigIngred
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.ProductoGridView);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.detailPanel);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Poet", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ConfigIngred";
             this.Text = "ConfigIngred";
             this.Load += new System.EventHandler(this.ConfigIngred_Load);
             this.detailPanel.ResumeLayout(false);
             this.detailPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.localInvPizzDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,15 +399,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private LocalInvPizzDBDataSet localInvPizzDBDataSet;
-        private System.Windows.Forms.BindingSource productBindingSource1;
-        private LocalInvPizzDBDataSetTableAdapters.ProductTableAdapter productTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewImageColumn DeleteCell;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DoughGrams;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CheeseGrams;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewImageColumn EditCell;
+        private System.Windows.Forms.DataGridViewImageColumn DeleteCell;
     }
 }

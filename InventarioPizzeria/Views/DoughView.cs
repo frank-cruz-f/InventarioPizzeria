@@ -23,6 +23,7 @@ namespace InventarioPizzeria.Views
         public DoughView(DoughOperation operation)
         {
             InitializeComponent();
+            DoughGridView.AutoGenerateColumns = false;
             dataAccess = new DoughDA();
             this.operation = operation;
             SetTitle(operation);
@@ -41,6 +42,9 @@ namespace InventarioPizzeria.Views
                 case DoughOperation.Remaining:
                     lblTitle.Text = "Sobrante de Masa";
                     break;
+                case DoughOperation.Split:
+                    lblTitle.Text = "Corte de Masa";
+                    break;
             }
         }
 
@@ -52,13 +56,7 @@ namespace InventarioPizzeria.Views
 
         private void InitializeGridView()
         {
-            DoughGridView.DataSource = dataAccess.getOperationDough(operation);
-
-            DoughGridView.Columns["Grams"].DisplayIndex = 0;
-            DoughGridView.Columns["Date"].DisplayIndex = 1;
-            DoughGridView.Columns["CookName"].DisplayIndex = 2;
-            DoughGridView.Columns["EditCell"].DisplayIndex = 3;
-            DoughGridView.Columns["DeleteCell"].DisplayIndex = 4;
+            DoughGridView.DataSource = dataAccess.getOperationDough(operation, Global.CurrentShop);
         }
 
         private void DoughGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -71,11 +69,11 @@ namespace InventarioPizzeria.Views
                 try
                 {
                     var dough = (DoughDTO)senderGrid.Rows[e.RowIndex].DataBoundItem;
-                    if (e.ColumnIndex == 0)
+                    if (e.ColumnIndex == 5)
                     {
                         populateEditDough(dough);
                     }
-                    else if (e.ColumnIndex == 1)
+                    else if (e.ColumnIndex == 6)
                     {
                         deleteDough(dough.ID);
                     }
@@ -107,7 +105,7 @@ namespace InventarioPizzeria.Views
         private void saveBtn_Click(object sender, EventArgs e)
         {
             bool result;
-            DoughDTO dough = new DoughDTO(int.Parse(gramsTbx.Text), DateTime.Parse(datePicker.Text), cookTbx.Text, operation);
+            DoughDTO dough = new DoughDTO(int.Parse(gramsTbx.Text), DateTime.Parse(datePicker.Text), cookTbx.Text, operation, Global.CurrentShop);
             if (editMode)
             {
                 dough.ID = editingID;

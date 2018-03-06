@@ -62,6 +62,7 @@
             this.DoughGridView.AllowUserToDeleteRows = false;
             this.DoughGridView.AllowUserToResizeColumns = false;
             this.DoughGridView.AllowUserToResizeRows = false;
+            this.DoughGridView.AutoGenerateColumns = false;
             this.DoughGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;

@@ -63,8 +63,8 @@ namespace InventarioPizzeria.Views
 
         private void calculateReportValues()
         {
-            
-            var doughsForDate = doughDA.getDoughsForDate(initialDatePicker.Value, finalDatePicker.Value);
+
+            var doughsForDate = doughDA.getDoughsForDate(initialDatePicker.Value, finalDatePicker.Value, Global.CurrentShop);
             var products = productDA.getProducts();
             var initialDough = doughsForDate.Where(d => d.Operation.Equals(DoughOperation.Initial));
             var remainingDough = doughsForDate.Where(d => d.Operation.Equals(DoughOperation.Remaining));
@@ -94,28 +94,29 @@ namespace InventarioPizzeria.Views
             var burntDoughQuantity = 0;
             var initialDoughQuantity = 0;
             var splitDoughQuantity = 0;
-            if(initialDough != null)
+            if (initialDough != null)
             {
                 initialDoughQuantity = initialDough.Sum(i => i.Grams); ;
             }
 
-            if(remainingDough != null)
+            if (remainingDough != null)
             {
                 remainingDoughQuantity = remainingDough.Sum(r => r.Grams);
             }
 
-            if(burntDough != null)
+            if (burntDough != null)
             {
                 burntDoughQuantity = burntDough.Sum(b => b.Grams);
             }
 
-            if(splitDough != null)
+            if (splitDough != null)
             {
                 splitDoughQuantity = splitDough.Sum(s => s.Grams);
             }
 
             var report = new ReportDTO(spentDough, initialDoughQuantity, remainingDoughQuantity, burntDoughQuantity, splitDoughQuantity, spentCheese);
-            reportDA.saveReport(report);
+            report.Date = DateTime.Now.ToString("dd/mm/yyyy hh:mm", CultureInfo.InvariantCulture);
+            reportDA.saveReport(report);            
             report.print();
         }
 

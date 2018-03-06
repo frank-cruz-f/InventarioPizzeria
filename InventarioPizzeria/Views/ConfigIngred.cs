@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using InventarioPizzeriaDAL.DA;
 using InventarioPizzeriaDAL.DTO;
 using System.Data;
+using System.ComponentModel;
 
 namespace InventarioPizzeria.Views
 {
@@ -15,13 +16,14 @@ namespace InventarioPizzeria.Views
         public ConfigIngred()
         {
             InitializeComponent();
+            ProductoGridView.AutoGenerateColumns = false;
             dataAccess = new ProductDA();
         }
 
         private void ConfigIngred_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'localInvPizzDBDataSet.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter1.Fill(this.localInvPizzDBDataSet.Product);
+            var productos = new BindingList<ProductDTO>(dataAccess.getProducts());
+            ProductoGridView.DataSource = productos;
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -44,7 +46,8 @@ namespace InventarioPizzeria.Views
 
         private void reloadGridView()
         {
-            this.productTableAdapter1.Fill(this.localInvPizzDBDataSet.Product);
+            var productos = new BindingList<ProductDTO>(dataAccess.getProducts());
+            ProductoGridView.DataSource = productos;
         }
 
         private void numericTexbox_TextChanged(object sender, EventArgs e)
@@ -88,8 +91,8 @@ namespace InventarioPizzeria.Views
             {
                 try
                 {
-                    var boundItem = (DataRowView)senderGrid.Rows[e.RowIndex].DataBoundItem;
-                    var productId = boundItem.Row.Field<int>("ID");
+                    var boundItem = (ProductDTO)senderGrid.Rows[e.RowIndex].DataBoundItem;
+                    var productId = boundItem.ID;
                     if(e.ColumnIndex == 5)
                     {
                         populateEditProduct(productId);

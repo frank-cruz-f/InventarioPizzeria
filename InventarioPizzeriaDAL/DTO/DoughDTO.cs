@@ -14,13 +14,14 @@ namespace InventarioPizzeriaDAL.DTO
 
         }
 
-        public DoughDTO(int grams, DateTime date, string cookName, DoughOperation operation, string name = "")
+        public DoughDTO(int grams, DateTime date, string cookName, DoughOperation operation, int shopId, string name = "")
         {
             this.Grams = grams;
             this.Date = date;
             this.CookName = cookName;
             this.Operation = operation;
             this.Name = name;
+            this.ShopId = shopId;
         }
 
         public int ID { get; set; }
@@ -29,5 +30,6 @@ namespace InventarioPizzeriaDAL.DTO
         public DateTime Date { get; set; }
         public DoughOperation Operation { get; set; }
         public string Name { get; set; }
+        public int ShopId { get; set; }
     }
 }

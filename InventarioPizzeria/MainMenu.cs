@@ -17,6 +17,11 @@ namespace InventarioPizzeria
         public MainMenu()
         {
             InitializeComponent();
+            if(Global.CurrentUserLevel != UserType.Admin)
+            {
+                loadReportBtn.Visible = false;
+                configurarIngredientesToolStripMenuItem.Visible = false;
+            }
         }
 
         private void configurarIngredientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,6 +58,17 @@ namespace InventarioPizzeria
         {
             ReportView report = new ReportView();
             report.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoginView login = new LoginView();
+            login.Show();
         }
     }
 }

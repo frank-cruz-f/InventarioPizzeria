@@ -127,7 +127,7 @@ namespace InventarioPizzeriaDAL.DTO
             PrintDialog pd = new PrintDialog();
             pdoc = new PrintDocument();
             PrinterSettings ps = new PrinterSettings();
-            Font font = new Font("Courier New", 15);
+            Font font = new Font("Courier New", 13);
 
 
             PaperSize psize = new PaperSize("Custom", 100, 200);
@@ -168,7 +168,9 @@ namespace InventarioPizzeriaDAL.DTO
             int Offset = 40;
             graphics.DrawString("Jerry's Pizza", new Font("Courier New", 14), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
-            graphics.DrawString("Fecha :" + Date, new Font("Courier New", 12), new SolidBrush(Color.Black), startX, startY + Offset);
+            graphics.DrawString("Fecha :", new Font("Courier New", 12), new SolidBrush(Color.Black), startX, startY + Offset);
+            Offset = Offset + 20;
+            graphics.DrawString(Date, new Font("Courier New", 12), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
             graphics.DrawString(underLine, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
@@ -176,15 +178,15 @@ namespace InventarioPizzeriaDAL.DTO
             Offset = Offset + 20;
             graphics.DrawString(underLine, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
-            graphics.DrawString("Masa inicial = " + initialDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
+            graphics.DrawString("M. inicial = " + initialDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
-            graphics.DrawString("Masa gastada = " + spentDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
+            graphics.DrawString("M. gastada = " + spentDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
-            graphics.DrawString("Masa quemada = " + burntDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
+            graphics.DrawString("M. quemada = " + burntDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
-            graphics.DrawString("Cortes de masa = " + splitDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
+            graphics.DrawString("Cortes = " + splitDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
-            graphics.DrawString("Masa sobrante = " + remainingDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
+            graphics.DrawString("M. sobrante = " + remainingDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
             graphics.DrawString(underLine, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
             Offset = Offset + 20;
