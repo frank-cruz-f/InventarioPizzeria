@@ -16,9 +16,9 @@ namespace InventarioPizzeriaDAL.DA
 
         }
 
-        public UserDTO login(string username, string password)
+        public UserDTO login(string username, string password, int shopId)
         {
-            var user = context.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
+            var user = context.Users.FirstOrDefault(u => u.Username == username && u.Password == password && shopId == u.ShopId);
             return user != null ? Mapper.Map<UserDTO>(user) : null;
         }
     }

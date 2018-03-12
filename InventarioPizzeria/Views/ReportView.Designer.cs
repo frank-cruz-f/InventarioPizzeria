@@ -46,17 +46,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poet", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(350, 162);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 20);
+            this.label5.Size = new System.Drawing.Size(54, 20);
             this.label5.TabIndex = 16;
             this.label5.Text = "Fecha";
             // 
             // generateReportBtn
             // 
-            this.generateReportBtn.Font = new System.Drawing.Font("Poet", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateReportBtn.Location = new System.Drawing.Point(307, 258);
+            this.generateReportBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateReportBtn.Location = new System.Drawing.Point(309, 258);
             this.generateReportBtn.Name = "generateReportBtn";
             this.generateReportBtn.Size = new System.Drawing.Size(144, 81);
             this.generateReportBtn.TabIndex = 18;

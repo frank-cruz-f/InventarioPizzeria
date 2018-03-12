@@ -8,190 +8,44 @@ namespace InventarioPizzeriaDAL.DTO
     public class ReportDTO
     {
         private PrintDocument pdoc = null;
-        private int spentDough;
-        private int initialDough;
-        int remainingDough;
-        int burntDough;
-        int spentCheese;
-        private string date;
-        private int splitDough;
-
-        public int SpentDough
-        {
-            get
-            {
-                return spentDough;
-            }
-
-            set
-            {
-                spentDough = value;
-            }
-        }
-
-        public int InitialDough
-        {
-            get
-            {
-                return initialDough;
-            }
-
-            set
-            {
-                initialDough = value;
-            }
-        }
-
-        public int RemainingDough
-        {
-            get
-            {
-                return remainingDough;
-            }
-
-            set
-            {
-                remainingDough = value;
-            }
-        }
-
-        public int BurntDough
-        {
-            get
-            {
-                return burntDough;
-            }
-
-            set
-            {
-                burntDough = value;
-            }
-        }
-
-        public int SpentCheese
-        {
-            get
-            {
-                return spentCheese;
-            }
-
-            set
-            {
-                spentCheese = value;
-            }
-        }
-
-        public string Date
-        {
-            get
-            {
-                return date;
-            }
-
-            set
-            {
-                date = value;
-            }
-        }
-
-        public int SplitDough
-        {
-            get
-            {
-                return splitDough;
-            }
-
-            set
-            {
-                splitDough = value;
-            }
-        }
+        public int SpentDough { get; set; }
+        public int InitialDough { get; set; }
+        public int RemainingDough { get; set; }
+        public int BurntDough { get; set; }
+        public int SpentCheese { get; set; }
+        public string Date { get; set; }
+        public int SplitDough { get; set; }
+        public int ShopId { get; set; }
+        public ShopDTO Shop { get; set; }
+        public bool IsCallCenterReport { get; set; }
+        public DateTime InitialDate { get; set; }
+        public DateTime FinalDate { get; set; }
 
         public ReportDTO()
         {
 
         }
 
-        public ReportDTO(int spentDough, int initialDough, int remainingDough, int burntDough, int splitDough, int spentCheese)
+        public ReportDTO(int spentDough, int initialDough, int remainingDough, int burntDough, int splitDough, int spentCheese, int shopId)
         {
-            this.spentDough = spentDough;
-            this.initialDough = initialDough;
-            this.remainingDough = remainingDough;
-            this.burntDough = burntDough;
-            this.spentCheese = spentCheese;
-            this.splitDough = splitDough;
+            this.SpentDough = spentDough;
+            this.InitialDough = initialDough;
+            this.RemainingDough = remainingDough;
+            this.BurntDough = burntDough;
+            this.SpentCheese = spentCheese;
+            this.SplitDough = splitDough;
+            this.ShopId = shopId;
         }
 
-        public void print()
+        public void addCallCenterValues(ReportDTO callCenterReport)
         {
-            PrintDialog pd = new PrintDialog();
-            pdoc = new PrintDocument();
-            PrinterSettings ps = new PrinterSettings();
-            Font font = new Font("Courier New", 13);
-
-
-            PaperSize psize = new PaperSize("Custom", 100, 200);
-            //ps.DefaultPageSettings.PaperSize = psize;
-
-
-
-            pd.Document = pdoc;
-            pd.Document.DefaultPageSettings.PaperSize = psize;
-            //pdoc.DefaultPageSettings.PaperSize.Height =320;
-            pdoc.DefaultPageSettings.PaperSize.Height = 820;
-
-            pdoc.DefaultPageSettings.PaperSize.Width = 520;
-
-            pdoc.PrintPage += new PrintPageEventHandler(pdoc_PrintPage);
-
-            DialogResult result = pd.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                PrintPreviewDialog pp = new PrintPreviewDialog();
-                pp.Document = pdoc;
-                result = pp.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-                    pdoc.Print();
-                }
-            }
-
-        }
-        void pdoc_PrintPage(object sender, PrintPageEventArgs e)
-        {
-            Graphics graphics = e.Graphics;
-            Font font = new Font("Courier New", 10);
-            String underLine = "------------------------------------------";
-            float fontHeight = font.GetHeight();
-            int startX = 30;
-            int startY = 55;
-            int Offset = 40;
-            graphics.DrawString("Jerry's Pizza", new Font("Courier New", 14), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            graphics.DrawString("Fecha :", new Font("Courier New", 12), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            graphics.DrawString(Date, new Font("Courier New", 12), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            graphics.DrawString(underLine, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            graphics.DrawString("Queso gastado = " + spentCheese, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            graphics.DrawString(underLine, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            graphics.DrawString("M. inicial = " + initialDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            graphics.DrawString("M. gastada = " + spentDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            graphics.DrawString("M. quemada = " + burntDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            graphics.DrawString("Cortes = " + splitDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            graphics.DrawString("M. sobrante = " + remainingDough, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            graphics.DrawString(underLine, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
-            Offset = Offset + 20;
-            String Grosstotal = "Dif de masa = " + (initialDough - spentDough - remainingDough - burntDough - splitDough);
-            graphics.DrawString(Grosstotal, new Font("Courier New", 10), new SolidBrush(Color.Black), startX, startY + Offset);
+            this.SpentCheese += callCenterReport.SpentCheese;
+            this.InitialDough += callCenterReport.InitialDough;
+            this.SplitDough += callCenterReport.SplitDough;
+            this.SpentDough += callCenterReport.SpentDough;
+            this.RemainingDough += callCenterReport.RemainingDough;
+            this.BurntDough += callCenterReport.BurntDough;
+            this.Shop = callCenterReport.Shop;
         }
     }
 }

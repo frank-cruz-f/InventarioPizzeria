@@ -23,5 +23,10 @@ namespace InventarioPizzeriaDAL.Entities
 
         [Required]
         public UserType UserType { get; set; }
+
+        public int ShopId { get; set; }
+
+        [ForeignKey("ShopId")]
+        public virtual Shop Shop { get; set; }
     }
 }

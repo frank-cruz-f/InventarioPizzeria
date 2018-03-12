@@ -101,8 +101,17 @@
     <Compile Include="Migrations\201803061753216_ShopUsers2.Designer.cs">
       <DependentUpon>201803061753216_ShopUsers2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803100034268_userxshop.cs" />
+    <Compile Include="Migrations\201803100034268_userxshop.Designer.cs">
+      <DependentUpon>201803100034268_userxshop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803112236528_CallCenterReport.cs" />
+    <Compile Include="Migrations\201803112236528_CallCenterReport.Designer.cs">
+      <DependentUpon>201803112236528_CallCenterReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -131,6 +140,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803061753216_ShopUsers2.resx">
       <DependentUpon>201803061753216_ShopUsers2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803100034268_userxshop.resx">
+      <DependentUpon>201803100034268_userxshop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803112236528_CallCenterReport.resx">
+      <DependentUpon>201803112236528_CallCenterReport.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

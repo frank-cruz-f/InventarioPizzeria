@@ -26,7 +26,7 @@ namespace InventarioPizzeria
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            var user = userDa.login(userTbx.Text, passTbx.Text);
+            var user = userDa.login(userTbx.Text, passTbx.Text, (int)shopCbx.SelectedValue);
             if(user != null)
             {
                 Global.CurrentUserLevel = user.UserType;
