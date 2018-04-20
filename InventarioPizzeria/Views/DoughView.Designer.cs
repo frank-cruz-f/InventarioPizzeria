@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DoughGridView = new System.Windows.Forms.DataGridView();
             this.Grams = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +52,10 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.filtroDtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.filtroLbl = new System.Windows.Forms.Label();
+            this.hastaLbl = new System.Windows.Forms.Label();
+            this.filtroDtpTo = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.DoughGridView)).BeginInit();
             this.detailPanel.SuspendLayout();
             this.SuspendLayout();
@@ -62,16 +66,15 @@
             this.DoughGridView.AllowUserToDeleteRows = false;
             this.DoughGridView.AllowUserToResizeColumns = false;
             this.DoughGridView.AllowUserToResizeRows = false;
-            this.DoughGridView.AutoGenerateColumns = false;
             this.DoughGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poet", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DoughGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DoughGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DoughGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DoughGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Grams,
@@ -81,16 +84,16 @@
             this.Operation,
             this.EditCell,
             this.DeleteCell});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poet", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DoughGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DoughGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.DoughGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DoughGridView.Location = new System.Drawing.Point(49, 93);
+            this.DoughGridView.Location = new System.Drawing.Point(49, 103);
             this.DoughGridView.MultiSelect = false;
             this.DoughGridView.Name = "DoughGridView";
             this.DoughGridView.ReadOnly = true;
@@ -101,7 +104,7 @@
             this.DoughGridView.ShowCellToolTips = false;
             this.DoughGridView.ShowEditingIcon = false;
             this.DoughGridView.ShowRowErrors = false;
-            this.DoughGridView.Size = new System.Drawing.Size(710, 224);
+            this.DoughGridView.Size = new System.Drawing.Size(710, 214);
             this.DoughGridView.TabIndex = 21;
             this.DoughGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoughGridView_CellContentClick);
             // 
@@ -178,8 +181,8 @@
             // 
             // addBtn
             // 
-            this.addBtn.Font = new System.Drawing.Font("Poet", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBtn.Location = new System.Drawing.Point(603, 51);
+            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.Location = new System.Drawing.Point(603, 61);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(156, 36);
             this.addBtn.TabIndex = 20;
@@ -206,36 +209,36 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poet", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(337, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 20);
+            this.label5.Size = new System.Drawing.Size(54, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Fecha";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poet", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(139, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 20);
+            this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Cocinero";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poet", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(139, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.Size = new System.Drawing.Size(66, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Gramos";
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Font = new System.Drawing.Font("Poet", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelBtn.Location = new System.Drawing.Point(516, 152);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(97, 33);
@@ -246,7 +249,7 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Font = new System.Drawing.Font("Poet", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.Location = new System.Drawing.Point(619, 152);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(87, 33);
@@ -284,20 +287,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poet", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(-6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 26);
+            this.label2.Size = new System.Drawing.Size(65, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Masa";
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Poet", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(25, 24);
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(43, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(230, 33);
+            this.lblTitle.Size = new System.Drawing.Size(205, 31);
             this.lblTitle.TabIndex = 18;
             this.lblTitle.Text = "Masa Quemada";
             // 
@@ -322,11 +325,54 @@
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.Width = 50;
             // 
+            // filtroDtpFrom
+            // 
+            this.filtroDtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.filtroDtpFrom.Location = new System.Drawing.Point(115, 51);
+            this.filtroDtpFrom.Name = "filtroDtpFrom";
+            this.filtroDtpFrom.Size = new System.Drawing.Size(101, 20);
+            this.filtroDtpFrom.TabIndex = 22;
+            this.filtroDtpFrom.ValueChanged += new System.EventHandler(this.filtroDtpFrom_ValueChanged);
+            // 
+            // filtroLbl
+            // 
+            this.filtroLbl.AutoSize = true;
+            this.filtroLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filtroLbl.Location = new System.Drawing.Point(49, 51);
+            this.filtroLbl.Name = "filtroLbl";
+            this.filtroLbl.Size = new System.Drawing.Size(60, 20);
+            this.filtroLbl.TabIndex = 23;
+            this.filtroLbl.Text = "Desde:";
+            // 
+            // hastaLbl
+            // 
+            this.hastaLbl.AutoSize = true;
+            this.hastaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hastaLbl.Location = new System.Drawing.Point(53, 77);
+            this.hastaLbl.Name = "hastaLbl";
+            this.hastaLbl.Size = new System.Drawing.Size(56, 20);
+            this.hastaLbl.TabIndex = 24;
+            this.hastaLbl.Text = "Hasta:";
+            this.hastaLbl.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // filtroDtpTo
+            // 
+            this.filtroDtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.filtroDtpTo.Location = new System.Drawing.Point(115, 77);
+            this.filtroDtpTo.Name = "filtroDtpTo";
+            this.filtroDtpTo.Size = new System.Drawing.Size(101, 20);
+            this.filtroDtpTo.TabIndex = 25;
+            this.filtroDtpTo.ValueChanged += new System.EventHandler(this.filtroDtpFrom_ValueChanged);
+            // 
             // DoughView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(784, 482);
+            this.Controls.Add(this.filtroDtpTo);
+            this.Controls.Add(this.hastaLbl);
+            this.Controls.Add(this.filtroLbl);
+            this.Controls.Add(this.filtroDtpFrom);
             this.Controls.Add(this.DoughGridView);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.detailPanel);
@@ -356,15 +402,7 @@
         private System.Windows.Forms.Panel detailPanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn burnedGramsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cookNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn burntDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DateTimePicker datePicker;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridView DoughGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grams;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
@@ -373,5 +411,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Operation;
         private System.Windows.Forms.DataGridViewImageColumn EditCell;
         private System.Windows.Forms.DataGridViewImageColumn DeleteCell;
+        private System.Windows.Forms.DateTimePicker filtroDtpFrom;
+        private System.Windows.Forms.Label filtroLbl;
+        private System.Windows.Forms.Label hastaLbl;
+        private System.Windows.Forms.DateTimePicker filtroDtpTo;
     }
 }

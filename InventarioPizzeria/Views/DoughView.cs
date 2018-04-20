@@ -27,6 +27,13 @@ namespace InventarioPizzeria.Views
             dataAccess = new DoughDA();
             this.operation = operation;
             SetTitle(operation);
+            if(Global.CurrentUserLevel != UserType.Admin)
+            {
+                filtroLbl.Visible = false;
+                hastaLbl.Visible = false;
+                filtroDtpFrom.Visible = false;
+                filtroDtpTo.Visible = false;
+            }
         }
 
         private void SetTitle(DoughOperation operation)
@@ -56,7 +63,17 @@ namespace InventarioPizzeria.Views
 
         private void InitializeGridView()
         {
-            DoughGridView.DataSource = dataAccess.getOperationDough(operation, Global.CurrentShop);
+            DateTime from, to;
+            if(Global.CurrentUserLevel != UserType.Admin)
+            {
+                from = to = DateTime.Now;
+            }
+            else
+            {
+                from = filtroDtpFrom.Value;
+                to = filtroDtpTo.Value;
+            }
+            DoughGridView.DataSource = dataAccess.getOperationDough(operation, Global.CurrentShop, from, to);
         }
 
         private void DoughGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -148,6 +165,16 @@ namespace InventarioPizzeria.Views
                 MessageBox.Show("Por favor usar solo numeros");
                 senderButton.Text = senderButton.Text.Remove(senderButton.Text.Length - 1);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filtroDtpFrom_ValueChanged(object sender, EventArgs e)
+        {
+            InitializeGridView();
         }
     }
 }

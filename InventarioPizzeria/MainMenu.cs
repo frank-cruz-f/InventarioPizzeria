@@ -1,4 +1,5 @@
 ﻿using InventarioPizzeria.Views;
+using InventarioPizzeriaDAL.DA;
 using InventarioPizzeriaDAL.Enums;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,12 @@ namespace InventarioPizzeria
 {
     public partial class MainMenu : Form
     {
+        private ShopDA shopDA;
         public MainMenu()
         {
+            shopDA = new ShopDA();
             InitializeComponent();
+            sucursal.Text = "Sucursal: " + shopDA.getShopNameById(Global.CurrentShop);
             if(Global.CurrentUserLevel != UserType.Admin)
             {
                 loadReportBtn.Visible = false;

@@ -49,9 +49,9 @@ namespace InventarioPizzeriaDAL.DA
             return result;
         }
 
-        public List<DoughDTO> getOperationDough(DoughOperation operation, int currentShop)
+        public List<DoughDTO> getOperationDough(DoughOperation operation, int currentShop, DateTime from, DateTime to)
         {
-            return Mapper.Map<List<DoughDTO>>(context.Doughs.Where(d => d.Operation == operation && d.ShopId == currentShop).ToList());
+            return getDoughsForDate(from, to, currentShop)?.Where(d => d.Operation == operation)?.ToList();
         }
 
         public void deleteDough(int doughId)

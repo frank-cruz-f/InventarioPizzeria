@@ -37,6 +37,7 @@
             this.doughCutBtn = new System.Windows.Forms.Button();
             this.initialDough = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.sucursal = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,11 +133,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // sucursal
+            // 
+            this.sucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sucursal.Location = new System.Drawing.Point(178, 90);
+            this.sucursal.Name = "sucursal";
+            this.sucursal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.sucursal.Size = new System.Drawing.Size(422, 51);
+            this.sucursal.TabIndex = 7;
+            this.sucursal.Text = "Sucursal";
+            this.sucursal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.sucursal);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.initialDough);
             this.Controls.Add(this.doughCutBtn);
@@ -165,6 +178,7 @@
         private System.Windows.Forms.Button initialDough;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Label sucursal;
     }
 }
 

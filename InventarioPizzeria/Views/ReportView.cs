@@ -206,6 +206,13 @@ namespace InventarioPizzeria.Views
                 {
                     return shop.ID;
                 }
+                else if(shop.Name.ToUpperInvariant().Equals("CARMEN"))
+                {
+                    if (records.Any(rec => rec.Portion.ToUpperInvariant().Contains(shop.Name.ToUpperInvariant()) || shop.Name.ToUpperInvariant().Contains(rec.Portion.ToUpperInvariant())))
+                    {
+                        return shop.ID;
+                    }
+                }
             }
             return 0;
         }
