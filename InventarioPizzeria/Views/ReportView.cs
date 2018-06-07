@@ -52,7 +52,9 @@ namespace InventarioPizzeria.Views
         {
             var reader = new StreamReader(fileStream);
             var csv = new CsvReader(reader);
-            csv.Configuration.UseNewObjectForNullReferenceProperties = true;
+            csv.Configuration.CultureInfo = CultureInfo.InvariantCulture;
+            csv.Configuration.HasHeaderRecord = true;
+            csv.Configuration.BadDataFound = BadDataFound;
             /*var culture = (CultureInfo)CultureInfo.CurrentCulture.Clone();
             var dateTimeFormat = new DateTimeFormatInfo();
             dateTimeFormat.FullDateTimePattern = "dd/MM/yyyy hh:mm tt";
@@ -62,6 +64,11 @@ namespace InventarioPizzeria.Views
             csv.Configuration.CultureInfo = culture;
             csv.Configuration.TrimFields = true;*/
             records = csv.GetRecords<RecordDTO>().ToList();
+        }
+
+        private void BadDataFound(ReadingContext obj)
+        {
+           
         }
 
         private ReportDTO calculateReportValues(int shopId, List<RecordDTO> recordsForReport, bool isCallCenterReport)
@@ -85,7 +92,7 @@ namespace InventarioPizzeria.Views
             });
             recordsForReport.ForEach(rep =>
             {
-                var product = products.Where(p => rep.Portion.ToUpperInvariant().Contains(p.Code.ToUpperInvariant()));
+                var product = products.Where(p => rep.Portion.ToUpperInvariant().Equals(p.Code.ToUpperInvariant()));
                 if (product != null)
                 {
                     product.ToList().ForEach(prod =>
@@ -191,8 +198,11 @@ namespace InventarioPizzeria.Views
             });
             shopRecords.ToList().ForEach(shop =>
             {
-                var report = calculateReportValues(shop.Key, shop.Value, true);
-                util.printList.Add(report);
+                if(shop.Key != 0)
+                {
+                    var report = calculateReportValues(shop.Key, shop.Value, true);
+                    util.printList.Add(report);
+                }
             });
             util.print();
         }

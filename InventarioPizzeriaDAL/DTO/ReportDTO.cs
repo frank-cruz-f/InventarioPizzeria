@@ -40,11 +40,7 @@ namespace InventarioPizzeriaDAL.DTO
         public void addCallCenterValues(ReportDTO callCenterReport)
         {
             this.SpentCheese += callCenterReport.SpentCheese;
-            this.InitialDough += callCenterReport.InitialDough;
-            this.SplitDough += callCenterReport.SplitDough;
             this.SpentDough += callCenterReport.SpentDough;
-            this.RemainingDough += callCenterReport.RemainingDough;
-            this.BurntDough += callCenterReport.BurntDough;
             this.Shop = callCenterReport.Shop;
         }
     }

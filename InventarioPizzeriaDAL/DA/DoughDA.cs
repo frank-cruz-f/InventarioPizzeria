@@ -51,7 +51,7 @@ namespace InventarioPizzeriaDAL.DA
 
         public List<DoughDTO> getOperationDough(DoughOperation operation, int currentShop, DateTime from, DateTime to)
         {
-            return getDoughsForDate(from, to, currentShop)?.Where(d => d.Operation == operation)?.ToList();
+            return getDoughsForDate(from, to, currentShop)?.Where(d => d.Operation == operation)?.OrderByDescending(d => d.Date).ToList();
         }
 
         public void deleteDough(int doughId)
